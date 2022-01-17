@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <header>
         <NavBar/>
-        <CartWidget/>
       </header>
       <ItemListContainer name='celular' price={50000}/>
     </div>
