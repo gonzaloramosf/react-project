@@ -1,5 +1,4 @@
 import NavBar from './components/nav-bar/navBar';
-import CartWidget from './components/CartWidget/CartWidget';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import './App.css';
 
@@ -9,7 +8,7 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <ItemListContainer name='celular' price={50000}/>
+      <ItemListContainer name='celular' price={50000} stock={7}/>
     </div>
   );
 }
