@@ -1,15 +1,12 @@
-import React from "react";
+import {useState} from 'react';
 import './ItemCount.css';
-import {stock} from '../ItemListContainer/ItemListContainer';
 
-export default function ItemCount({stock, initital, onAdd}) {
-    
-    const onAdd = () => {
-        if (quantity >= ItemListContainer.stock) {
-            setQuantity(quantity + 0)
-        }
-        else {
-            setQuantity(quantity + 1)
+export default function ItemCount({stock, initial, onAdd}) {
+    const [quantity, setQuantity] = useState(initial);
+
+    const add = () => {
+        if (quantity < stock) {
+            setQuantity(quantity + 1);
         }
     };
 
@@ -17,7 +14,7 @@ export default function ItemCount({stock, initital, onAdd}) {
         if (quantity < 1) {
             setQuantity(quantity - 0)
         }
-        else{
+        else {
             setQuantity(quantity - 1)
         }
     };
@@ -25,7 +22,7 @@ export default function ItemCount({stock, initital, onAdd}) {
     return (
         <div>
             <h3> Cantidad = {quantity} </h3>
-            <button onClick={onAdd}>  + </button>
+            <button onClick={add}>  + </button>
             <button onClick={remove}> - </button>
         </div>
     );

@@ -8,7 +8,7 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <ItemListContainer name='celular' price={50000}/>
+      <ItemListContainer name='celular' price={50000} stock={7}/>
     </div>
   );
 }
