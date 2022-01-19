@@ -1,15 +1,11 @@
 import React from "react";
-import './ItemCount.css'
+import './ItemCount.css';
+import {stock} from '../ItemListContainer/ItemListContainer';
 
-
-export default function ItemCount() {
-
-    const [quantity, setQuantity] = React.useState(0);
-
-    const stock = 7;
+export default function ItemCount({stock, initital, onAdd}) {
     
     const onAdd = () => {
-        if (quantity >= stock) {
+        if (quantity >= ItemListContainer.stock) {
             setQuantity(quantity + 0)
         }
         else {
