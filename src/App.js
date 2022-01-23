@@ -1,5 +1,6 @@
 import NavBar from './components/nav-bar/navBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Item from './components/Item/Item';
 import './App.css';
 
 function App() {
@@ -8,7 +9,11 @@ function App() {
       <header>
         <NavBar/>
       </header>
-      <ItemListContainer name='celular' price={50000} stock={7}/>
+
+      <div id='items'>
+        <ItemListContainer name='celular' price={50000} stock={7}/>
+        <Item/>
+      </div>
     </div>
   );
 }
