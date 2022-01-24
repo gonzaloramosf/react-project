@@ -2,6 +2,7 @@ import NavBar from './components/nav-bar/navBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Item from './components/Item/Item';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -11,8 +12,7 @@ function App() {
       </header>
 
       <div id='items'>
-        <ItemListContainer name='celular' price={50000} stock={7}/>
-        <Item/>
+        <ItemListContainer/>
       </div>
     </div>
   );

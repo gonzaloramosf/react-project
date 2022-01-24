@@ -1,13 +1,15 @@
+import ItemCount from '../ItemCount/ItemCount';
 import './Item.css';
 
-const Item = () => {
-
+const Item = ({item}) => {
 
     return (
         <div>
-            <h3> Descripción: </h3>
-            <p id='description'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper viverra finibus. Pellentesque non dapibus mauris. Praesent iaculis laoreet urna pellentesque sollicitudin. Fusce ut justo id orci placerat pulvinar. </p>
-            <button> Mas información </button>
+            <h4> Nombre: {item.name}            </h4>
+            <p> Descripcion: {item.description} </p>
+            <p> Stock: <b>{item.stock}</b>      </p>
+            <p> Precio: <b>{item.price}</b>    </p>
+            <ItemCount initial={1} stock={item.stock}/>
         </div>
     );
 }
