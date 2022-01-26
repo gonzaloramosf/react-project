@@ -37,6 +37,6 @@ export function getItems () {
 
 export function getItemById () {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(items.id))
+        setTimeout(() => resolve(items.id), 4000)
     })
 }
