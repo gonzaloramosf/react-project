@@ -34,3 +34,9 @@ export function getItems () {
         setTimeout(() => resolve(items), 4000)
     })
 }
+
+export function getItemById () {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(items.id))
+    })
+}
