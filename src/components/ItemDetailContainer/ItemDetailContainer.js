@@ -14,7 +14,7 @@ export default function ItemDetailContainer() {
         getItemById(id).then((result) => {setItems(result)})
                        .catch((error) => {console.log(error)})
                        .finally(()    => {setIsLoading(false)});
-    }, [id])
+    }, [])
 
     return (
         <div>
