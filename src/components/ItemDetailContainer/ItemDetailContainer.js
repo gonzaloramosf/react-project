@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 export default function ItemDetailContainer() {
     const {itemId} = useParams();
-    const [items, setItem] = useState();
+    const [item, setItem] = useState();
     const [isLoading, setIsLoading] = useState(true);
     
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function ItemDetailContainer() {
 
     return (
         <div>
-            { isLoading ? <p> loading... </p> : <ItemDetail item={items}/> }
+            { isLoading ? <p> loading... </p> : <ItemDetail item={item}/> }
         </div>
     );
 }

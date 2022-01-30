@@ -1,6 +1,6 @@
 
 
-const ItemDetail = ( item ) => {
+const ItemDetail = ( {item} ) => {
 
     return (
         <div key={item.id}>
