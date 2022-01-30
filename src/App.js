@@ -6,7 +6,7 @@ import HomePage from './Pages/HomePage';
 import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
 import ContactPage from './Pages/ContactPage';
-import ProductDetailPage from './Pages/ProductDetailPage';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route index element={<HomePage/>} />
           <Route path='/products'> 
             <Route index element={<ProductsPage/>}/>
-            <Route path=':itemId' element={<ProductDetailPage/>} />
+            <Route path=':itemId' element={<ItemDetailContainer/>} />
           </Route>
           <Route path='/contact' element={<ContactPage/>} />
           <Route path='/about' element={<AboutUsPage/>} />

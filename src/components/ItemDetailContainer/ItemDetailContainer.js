@@ -3,18 +3,17 @@ import { getItemById } from "../ItemListContainer/Database";
 import ItemDetail from './ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
-export default function ItemDetailContainer(id) {
-    const {id} = useParams();
-    const [items, setItems] = useState([]);
-
-    const [isLoading, setIsLoading] = useState(false);
+export default function ItemDetailContainer() {
+    const {itemId} = useParams();
+    const [items, setItem] = useState();
+    const [isLoading, setIsLoading] = useState(true);
     
     useEffect(() => {
         setIsLoading(true);
-        getItemById(id).then((result) => {setItems(result)})
-                       .catch((error) => {console.log(error)})
-                       .finally(()    => {setIsLoading(false)});
-    }, [])
+        getItemById(itemId).then((result) => {setItem(result[0])})
+                           .catch((error) => {console.log(error)})
+                           .finally(()    => {setIsLoading(false)});
+    }, [itemId])
 
     return (
         <div>

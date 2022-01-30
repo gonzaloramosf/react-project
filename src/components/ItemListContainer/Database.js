@@ -35,8 +35,10 @@ export function getItems () {
     })
 }
 
-export function getItemById () {
+// item.id = itemId ? item : console.log(`error`)
+
+export function getItemById (itemId) {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(items.id), 4000)
+        setTimeout(() => resolve(items.filter(item => {item.id = itemId}), 4000))
     })
 }
