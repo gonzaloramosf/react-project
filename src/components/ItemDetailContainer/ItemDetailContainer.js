@@ -3,7 +3,7 @@ import { getItemById } from "../ItemListContainer/Database";
 import ItemDetail from './ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 
-export default function ItemDetailContainer() {
+export default function ItemDetailContainer(id) {
     const {id} = useParams();
     const [items, setItems] = useState([]);
 
