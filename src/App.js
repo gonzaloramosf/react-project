@@ -1,12 +1,15 @@
-import NavBar from './components/NavBar/NavBar';
-import './App.css';
+// +
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// Components
+import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+// Pages
 import HomePage from './Pages/HomePage';
 import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
 import ContactPage from './Pages/ContactPage';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import NotFoundPage from './Pages/NotFoundPage';
 
 function App() {
@@ -29,5 +32,4 @@ function App() {
     // Falta el <Footer/>
   );
 }
-
 export default App;
