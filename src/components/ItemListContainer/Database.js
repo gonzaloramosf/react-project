@@ -43,6 +43,6 @@ export function getItemById (itemId) {
             if (item.id === +itemId) {
                 return item;
             }
-         })), 4000)
+         })), 2000)
     })
 } 
