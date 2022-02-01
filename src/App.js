@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+// import {CartContext} from './Context/CartContext'
 // Pages
 import HomePage from './Pages/HomePage';
 import AboutUsPage from './Pages/AboutUsPage';
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/'>
           <Route index element={<HomePage/>} />
+          {/* <CartContext.Provider> </CartContext.Provider> */}
           <Route path='/products'> 
             <Route index element={<ProductsPage/>}/>
             <Route path=':itemId' element={<ItemDetailContainer/>} />

@@ -35,14 +35,8 @@ export function getItems () {
     })
 }
 
-// item.id = itemId ? item : console.log(`error`)
-
 export function getItemById (itemId) {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(items.filter(item => { 
-            if (item.id === +itemId) {
-                return item;
-            }
-         })), 2000)
+        setTimeout(() => resolve(items.filter(item => item.id === + itemId ? item : console.log('error'))), 2000)
     })
 } 
