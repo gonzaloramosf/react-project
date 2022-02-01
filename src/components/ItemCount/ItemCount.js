@@ -6,18 +6,24 @@ export default function ItemCount({stock, initial, onAdd}) {
 
     const add = () => {
         if (quantity < stock) {
-            setQuantity(quantity + 1);
+            setQuantity((prevState)=> prevState + 1);
         }
     };
 
     const remove = () => {
         if (quantity < 1) {
-            setQuantity(quantity - 0)
+            setQuantity((prevState) => prevState - 0)
         }
         else {
-            setQuantity(quantity - 1)
+            setQuantity((prevState) => prevState - 1)
         }
     };
+
+
+    // quantity llega como parametro a la function de Item
+    // ahora hay que enviarle el valor a ItemDetail
+
+    onAdd(quantity);
 
     return (
         <div>

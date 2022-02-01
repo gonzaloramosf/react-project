@@ -14,12 +14,6 @@ export default function ItemListContainer() {
                   .finally(()    => {setIsLoading(false)});
     }, [])
 
-
-
-    function onAdd() {
-        console.log('agregue al carrito');
-    }
-
     return (
         <div>
             { isLoading ? <p> loading... </p> : <ItemList items={items}/> }
