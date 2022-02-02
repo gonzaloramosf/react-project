@@ -12,6 +12,7 @@ import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
 import ContactPage from './Pages/ContactPage';
 import NotFoundPage from './Pages/NotFoundPage';
+import CartPage from './Pages/CartPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route index element={<ProductsPage/>}/>
             <Route path=':itemId' element={<ItemDetailContainer/>} />
           </Route>
+          <Route path='/cart' element={<CartPage/>} />
           <Route path='/contact' element={<ContactPage/>} />
           <Route path='/about' element={<AboutUsPage/>} />
           <Route path='*' element={<NotFoundPage/>} />
