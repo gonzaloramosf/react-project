@@ -15,9 +15,14 @@ export default function ItemDetailContainer() {
                            .finally(()    => {setIsLoading(false)});
     }, [itemId])
 
+    function onAdd(quantity) {
+        console.log(quantity);
+        <ItemDetail quantity={quantity}/>
+    }
+
     return (
         <div>
-            { isLoading ? <p> loading... </p> : <ItemDetail item={item}/> }
+            { isLoading ? <p> loading... </p> : <ItemDetail item={item} onAdd={onAdd}/> }
         </div>
     );
 }

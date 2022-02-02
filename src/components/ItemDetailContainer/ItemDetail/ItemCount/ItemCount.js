@@ -7,6 +7,7 @@ export default function ItemCount({stock, initial, onAdd}) {
     const add = () => {
         if (quantity < stock) {
             setQuantity((prevState)=> prevState + 1);
+            onAdd(quantity);
         }
     };
 
@@ -16,21 +17,17 @@ export default function ItemCount({stock, initial, onAdd}) {
         }
         else {
             setQuantity((prevState) => prevState - 1)
+            onAdd(quantity);
         }
     };
-
-
-    // quantity llega como parametro a la function de Item
-    // ahora hay que enviarle el valor a ItemDetail
-
-    onAdd(quantity);
 
     return (
         <div>
             <h3> Cantidad = {quantity} </h3>
             <button onClick={add}>  + </button>
             <button onClick={remove}> - </button>
-            <button onClick={() => quantity}> Agregar al carrito </button>
+            {/* <button onClick={() => onAdd(quantity)}> Agregar al carrito </button> */}
+            <button> Ir al Carrito </button>
         </div>
     );
 }
