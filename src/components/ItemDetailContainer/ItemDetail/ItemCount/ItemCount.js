@@ -26,7 +26,7 @@ export default function ItemCount({stock, initial, onAdd}) {
             <h3> Cantidad = {quantity} </h3>
             <button onClick={add}>  + </button>
             <button onClick={remove}> - </button>
-            {/* <button onClick={() => onAdd(quantity)}> Agregar al carrito </button> */}
+            <button onClick={() => onAdd(quantity)}> Agregar al carrito </button>
         </div>
     );
 }

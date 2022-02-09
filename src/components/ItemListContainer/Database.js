@@ -61,8 +61,8 @@ export function getItemById (itemId) {
     })
 } 
 
-// export function getItemByCategory (catId) {
-//     return new Promise((resolve) => {
-//         setTimeout(() => resolve(items.filter(item => item.category === + catId ? item : console.log('error'))), 1000)
-//     })
-// }
+export function getItemByCategory (catId) {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve(items.filter(item => item.category === + catId ? item : console.log('error'))), 1000)
+    })
+}

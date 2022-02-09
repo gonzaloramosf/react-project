@@ -1,8 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import ItemCount from "./ItemCount/ItemCount";
 
-const ItemDetail = ( {item, onAdd, quantity} ) => {
+const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
+
+    function onAdd(quantity) {
+        console.log(quantity);
+    }
 
     return (
         <div key={item.id}>
@@ -12,7 +16,6 @@ const ItemDetail = ( {item, onAdd, quantity} ) => {
                 <h3>{item.price}</h3>
                 <p>{item.description}</p>
                 <p> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-                <button> Agregar al carrito </button>
                 <button onClick={()=> navigate(`/cart`)}> Ir al carrito </button>
                 <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
             </div>
