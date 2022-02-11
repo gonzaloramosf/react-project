@@ -13,11 +13,19 @@ export const CartProvider = ({ children }) => {
         setCart((prevState) => [...prevState, newItem]);
     }
 
+    const removeItem = (id) => {
+        setCart((prevState) => prevState.filter((element) => element.item.id !== id));
+    }
+
+    const clearCart = () => {
+        setCart([]);
+    }
+
     // useEffect (() => {
     // }, []);
 
     return (
-        <CartContext.Provider value={{cart, addItem}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clearCart}}>
             { children } 
         </CartContext.Provider>
     );
