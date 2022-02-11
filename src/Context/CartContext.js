@@ -1,19 +1,26 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 export const CartContext = createContext([]);
 
 
 export const CartProvider = ({ children }) => {
-    const [products, setProducts] = useState({});
-    const [error, setError] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
+    const [cart, setCart] = useState([]);
+    // const [error, setError] = useState(null);
+    // const [isLoading, setIsLoading] = useState(false);
     
-    useEffect (() => {
+    const addItem = (item, quantity) => {
+        const newItem = {item, quantity};
+        console.log('se agrego ', newItem)
+        setCart((prevState) => [...prevState, newItem]);
+    }
 
-    }, []);
+    // useEffect (() => {
+    // }, []);
 
     return (
-        <CartContext.Provider value={{products, error, isLoading}}>
+        <CartContext.Provider value={{cart, addItem}}>
             { children } 
         </CartContext.Provider>
     );
 }
+
+export const useCart = () => useContext(CartContext);

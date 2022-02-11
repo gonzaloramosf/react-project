@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../../Context/CartContext';
 import ItemCount from "./ItemCount/ItemCount";
 
 const ItemDetail = ( {item} ) => {
@@ -6,6 +7,12 @@ const ItemDetail = ( {item} ) => {
 
     function onAdd(quantity) {
         console.log(quantity);
+    }
+
+    const { cart, addItem } = useCart();
+
+    const handleClick = () => {
+        addItem(item)
     }
 
     return (
@@ -16,8 +23,8 @@ const ItemDetail = ( {item} ) => {
                 <h3>{item.price}</h3>
                 <p>{item.description}</p>
                 <p> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-                <button onClick={()=> navigate(`/cart`)}> Ir al carrito </button>
                 <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
+                <button onClick={handleClick}> Ir al carrito </button>
             </div>
         </div>
     )
