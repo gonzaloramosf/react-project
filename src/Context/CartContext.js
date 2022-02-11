@@ -7,8 +7,8 @@ export const CartProvider = ({ children }) => {
     // const [error, setError] = useState(null);
     // const [isLoading, setIsLoading] = useState(false);
     
-    const addItem = (item, quantity) => {
-        const newItem = {item, quantity};
+    const addItem = (item, quantityAdd) => {
+        const newItem = {item, quantityAdd};
         console.log('se agrego ', newItem)
         setCart((prevState) => [...prevState, newItem]);
     }

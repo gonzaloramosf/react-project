@@ -4,15 +4,20 @@ import ItemCount from "./ItemCount/ItemCount";
 
 const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
+    let quantityAdd;
 
-    function onAdd(quantity) {
+    // function onAdd(quantity) {
+    //     console.log(quantity);
+    // }
+    const onAdd = ( quantity ) => {
         console.log(quantity);
+        quantityAdd = quantity;
     }
 
     const { cart, addItem } = useCart();
 
     const handleClick = () => {
-        addItem(item)
+        addItem(item, quantityAdd)
     }
 
     return (
