@@ -7,7 +7,6 @@ export default function ItemCount({stock, initial, onAdd}) {
     const add = () => {
         if (quantity < stock) {
             setQuantity((prevState)=> prevState + 1);
-            onAdd(quantity);
         }
     };
 
@@ -17,7 +16,6 @@ export default function ItemCount({stock, initial, onAdd}) {
         }
         else {
             setQuantity((prevState) => prevState - 1)
-            onAdd(quantity);
         }
     };
 

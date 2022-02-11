@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-// import {CartContext} from './Context/CartContext'
+import {CartProvider} from './Context/CartContext'
 // Pages
 import HomePage from './Pages/HomePage';
 import AboutUsPage from './Pages/AboutUsPage';
@@ -16,23 +16,24 @@ import CartPage from './Pages/CartPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar/>
-      <Routes>
-        <Route path='/'>
-          <Route index element={<HomePage/>} />
-          {/* <CartContext.Provider> </CartContext.Provider> */}
-          <Route path='/products'> 
-            <Route index element={<ProductsPage/>}/>
-            <Route path=':itemId' element={<ItemDetailContainer/>} />
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path='/'>
+            <Route index element={<HomePage/>} />
+            <Route path='/products'> 
+              <Route index element={<ProductsPage/>}/>
+              <Route path=':itemId' element={<ItemDetailContainer/>} />
+            </Route>
+            <Route path='/cart' element={<CartPage/>} />
+            <Route path='/contact' element={<ContactPage/>} />
+            <Route path='/about' element={<AboutUsPage/>} />
+            <Route path='*' element={<NotFoundPage/>} />
           </Route>
-          <Route path='/cart' element={<CartPage/>} />
-          <Route path='/contact' element={<ContactPage/>} />
-          <Route path='/about' element={<AboutUsPage/>} />
-          <Route path='*' element={<NotFoundPage/>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
     // Falta el <Footer/>
   );
 }
