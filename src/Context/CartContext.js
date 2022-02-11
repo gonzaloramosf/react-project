@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 export const CartContext = createContext([]);
 
 
@@ -7,8 +7,8 @@ export const CartProvider = ({ children }) => {
     // const [error, setError] = useState(null);
     // const [isLoading, setIsLoading] = useState(false);
     
-    const addItem = (item, quantityAdd) => {
-        const newItem = {item, quantityAdd};
+    const addItem = (item, quantity) => {
+        const newItem = {item, quantity};
         console.log('se agrego ', newItem)
         setCart((prevState) => [...prevState, newItem]);
     }
@@ -20,9 +20,6 @@ export const CartProvider = ({ children }) => {
     const clearCart = () => {
         setCart([]);
     }
-
-    // useEffect (() => {
-    // }, []);
 
     return (
         <CartContext.Provider value={{cart, addItem, removeItem, clearCart}}>

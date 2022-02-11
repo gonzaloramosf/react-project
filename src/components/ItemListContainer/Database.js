@@ -51,13 +51,13 @@ export const items = [
 
 export function getItems () {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(items), 4000)
+        setTimeout(() => resolve(items), 1500)
     })
 }
 
 export function getItemById (itemId) {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(items.filter(item => item.id === + itemId)), 2000)
+        setTimeout(() => resolve(items.filter(item => item.id === + itemId)), 1000)
         // setTimeout(() => resolve(items.filter(item => item.id === + itemId ? item : console.log('error'))), 2000)
     })
 } 

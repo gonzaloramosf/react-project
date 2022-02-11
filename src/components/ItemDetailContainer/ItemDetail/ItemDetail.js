@@ -4,20 +4,19 @@ import ItemCount from "./ItemCount/ItemCount";
 
 const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
-    let quantityAdd;
 
     // function onAdd(quantity) {
     //     console.log(quantity);
     // }
     const onAdd = ( quantity ) => {
         console.log(quantity);
-        quantityAdd = quantity;
+        handleClick(quantity);
     }
 
-    const { cart, addItem } = useCart();
+    const { addItem } = useCart();
 
-    const handleClick = () => {
-        addItem(item, quantityAdd)
+    const handleClick = (quantity) => {
+        addItem(item, quantity)
     }
 
     return (
@@ -29,7 +28,7 @@ const ItemDetail = ( {item} ) => {
                 <p>{item.description}</p>
                 <p> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
-                <button onClick={handleClick}> Ir al carrito </button>
+                <button onClick={()=> navigate(`/cart`)}> Ir al carrito </button>
             </div>
         </div>
     )
