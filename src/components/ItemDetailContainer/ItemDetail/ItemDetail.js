@@ -1,22 +1,27 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { useCart } from '../../../Context/CartContext';
 import ItemCount from "./ItemCount/ItemCount";
 
 const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
+    const { cart, addItem } = useCart();
+    const [isProductInCart, setIsProductInCart] = useState(false);
 
-    // function onAdd(quantity) {
-    //     console.log(quantity);
-    // }
     const onAdd = ( quantity ) => {
         console.log(quantity);
-        handleClick(quantity);
-    }
 
-    const { addItem } = useCart();
+        if (!isProductInCart){
+            handleClick(quantity);
+        }
+        else {
+            console.log('ya esta en el carrito, ir al carrito')
+        }
+    }
 
     const handleClick = (quantity) => {
         addItem(item, quantity)
+        setIsProductInCart(true);
     }
 
     return (
