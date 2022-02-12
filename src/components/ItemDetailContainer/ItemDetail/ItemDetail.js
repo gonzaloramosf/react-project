@@ -10,7 +10,6 @@ const ItemDetail = ( {item} ) => {
 
     const onAdd = ( quantity ) => {
         console.log(quantity);
-
         if (!isProductInCart){
             handleClick(quantity);
         }

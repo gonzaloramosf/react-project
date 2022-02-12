@@ -26,6 +26,7 @@ function App() {
               <Route index element={<ProductsPage/>}/>
               <Route path=':itemId' element={<ItemDetailContainer/>} />
             </Route>
+            <Route path='/category/:categoryId' element={<ProductsPage/>}/>
             <Route path='/cart' element={<CartPage/>} />
             <Route path='/contact' element={<ContactPage/>} />
             <Route path='/about' element={<AboutUsPage/>} />
