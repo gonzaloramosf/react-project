@@ -5,7 +5,7 @@ import ItemCount from "./ItemCount/ItemCount";
 
 const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
-    const { cart, addItem } = useCart();
+    const { addItem } = useCart();
     const [isProductInCart, setIsProductInCart] = useState(false);
 
     const onAdd = ( quantity ) => {
@@ -19,7 +19,7 @@ const ItemDetail = ( {item} ) => {
     }
 
     const handleClick = (quantity) => {
-        addItem(item, quantity)
+        addItem(item, quantity);
         setIsProductInCart(true);
     }
 
