@@ -7,14 +7,20 @@ const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
     const { addItem } = useCart();
     const [isProductInCart, setIsProductInCart] = useState(false);
+    const [oldQuantity, setOldQuantity] = useState(0);
 
     const onAdd = ( quantity ) => {
         console.log(quantity);
         if (!isProductInCart){
+            setOldQuantity(quantity);
             handleClick(quantity);
         }
         else {
             console.log('ya esta en el carrito, ir al carrito')
+            // quantity = oldQuantity + quantity;
+            quantity = oldQuantity + quantity;
+            handleClick(quantity);
+            setOldQuantity(quantity);
         }
     }
 
