@@ -15,7 +15,6 @@ export default function ItemListContainer() {
         let itemsCollection;
         
         if (categoryId) {
-            console.log(categoryId)
             itemsCollection = dataBase.collection('items')
                                       .where('category', '==', +categoryId);
         }

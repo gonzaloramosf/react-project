@@ -19,9 +19,26 @@ export const CartProvider = ({ children }) => {
 
 
     const addItem = (item, quantity) => {
-        const newItem = {item, quantity};
-        console.log('se agrego ', newItem)
-        setCart((prevState) => [...prevState, newItem]);
+        const itemIsInCart = cart.find((order) => order.item.id === item.id);
+        if (itemIsInCart) {
+            // add quantity to a item in cart
+            const updateCart = cart.map((order) => {
+                if (order.item.id === item.id){
+                    return {...order, quantity: quantity + order.quantity};
+                }
+                else{
+                    return order;
+                }
+            });
+            setCart(updateCart);
+        }
+        else{
+            // add new item to cart
+            setCart((prevState)=> [...prevState, {item, quantity}]);
+        }
+        // const newItem = {item, quantity};
+        // console.log('se agrego ', newItem)
+        // setCart((prevState) => [...prevState, newItem]);
     }
 
     const removeItem = (id) => {

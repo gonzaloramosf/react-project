@@ -1,33 +1,19 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 import { useCart } from '../../../Context/CartContext';
 import ItemCount from "./ItemCount/ItemCount";
 
 const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
     const { addItem } = useCart();
-    const [isProductInCart, setIsProductInCart] = useState(false);
-    const [oldQuantity, setOldQuantity] = useState(0);
 
     const onAdd = ( quantity ) => {
-        console.log(quantity);
-        if (!isProductInCart){
-            setOldQuantity(quantity);
-            handleClick(quantity);
-        }
-        else {
-            console.log('ya esta en el carrito, ir al carrito')
-            // quantity = oldQuantity + quantity;
-            quantity = oldQuantity + quantity;
-            handleClick(quantity);
-            setOldQuantity(quantity);
-        }
+        // handleClick(quantity);
+        addItem(item, quantity);
     }
 
-    const handleClick = (quantity) => {
-        addItem(item, quantity);
-        setIsProductInCart(true);
-    }
+    // const handleClick = (quantity) => {
+    //     addItem(item, quantity);
+    // }
 
     return (
         <div key={item.id}>
