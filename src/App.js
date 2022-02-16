@@ -13,6 +13,7 @@ import ProductsPage from './Pages/ProductsPage';
 import ContactPage from './Pages/ContactPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import CartPage from './Pages/CartPage';
+import CheckoutPage from './Pages/CheckoutPage';
 
 function App() {
   return (
@@ -27,7 +28,10 @@ function App() {
               <Route path=':itemId' element={<ItemDetailContainer/>} />
             </Route>
             <Route path='/category/:categoryId' element={<ProductsPage/>}/>
-            <Route path='/cart' element={<CartPage/>} />
+            <Route path='/cart'>
+              <Route index element={<CartPage/>} />
+              <Route path='/cart/checkout' element={<CheckoutPage/>} />
+            </Route>
             <Route path='/contact' element={<ContactPage/>} />
             <Route path='/about' element={<AboutUsPage/>} />
             <Route path='*' element={<NotFoundPage/>} />
