@@ -11,7 +11,7 @@ const CartPage = () => {
                 return (
                     <div key={purchase.item.id}>
                         <p>{purchase.item.name}</p>
-                        <p>{purchase.quantityAdd}</p>
+                        <p>{purchase.quantity}</p>
                         <button onClick={()=>removeItem(purchase.item.id)}> eliminar </button>
                     </div>
                 )
