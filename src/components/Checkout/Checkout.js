@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {useCart} from '../../Context/CartContext';
 import { getFirestore } from "../../firebase";
 
@@ -6,6 +7,7 @@ const Checkout = () => {
     const {cart} = useCart();
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
+    const navigate = useNavigate();
 
     const total = (cart) => {
         let total = 0;
@@ -36,8 +38,12 @@ const Checkout = () => {
 
         console.log(newOrder);
         const db = getFirestore();
-        db.collection('orders').add(newOrder).then((res) => console.log('compra realizada', res.id))
-                                             .catch((err) => console.log('error', err))
+        db.collection('orders').add(newOrder)
+                               .then((res) => {
+                                   console.log('compra realizada', res.id)
+                                   navigate(`/purchasereceived/${res.id}`)
+                            })
+                               .catch((err) => console.log('error', err))
     }
 
     return (

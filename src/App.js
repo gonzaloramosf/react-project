@@ -14,6 +14,7 @@ import ContactPage from './Pages/ContactPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import CartPage from './Pages/CartPage';
 import CheckoutPage from './Pages/CheckoutPage';
+import PurchaseReceivedPage from './Pages/PurchaseReceivedPage';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route index element={<CartPage/>} />
               <Route path='/cart/checkout' element={<CheckoutPage/>} />
             </Route>
+            <Route path='/purchasereceived/:orderId' element={<PurchaseReceivedPage/>}/>
             <Route path='/contact' element={<ContactPage/>} />
             <Route path='/about' element={<AboutUsPage/>} />
             <Route path='*' element={<NotFoundPage/>} />
