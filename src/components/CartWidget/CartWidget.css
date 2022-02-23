@@ -1,4 +1,15 @@
 .cart {
     color: yellow;
-    margin-left: 10em;
+    margin-left: 1em;
+}
+
+#cartNumberFlex{
+    margin-top: 5px;
+    display: flex;
+}
+
+#cartNumberFlex p {
+    color: yellow;
+    padding: 0;
+    margin: 0;
 }

@@ -1,5 +1,6 @@
 // +
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './GlobalStyles.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // Components
 import './App.css';

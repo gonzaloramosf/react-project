@@ -1,41 +1,179 @@
-header {
-  width: 100%;
-  height: 4em;
-  background-color: #222222;
+/* Global NavBart styles */
+
+@media screen and (max-width: 500px){
+  header nav {
+    width: 100%;
+    height: 3em;
+    background-color: #050505;
+  }
+
+  #burger li:last-child {
+    display: none;
+  }
+  
+  #navBar {
+    background-color: #050505;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 500ms;
+  }
+
+  nav:target #burger li:first-child {
+    display: none;
+  }
+
+  nav:target #burger li:last-child {
+    display: block;
+  }
+
+  nav:target #navBar{
+    height: calc(100vh - 3em);
+  }
+
+  #navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  #burger li {
+    width: 2em;
+    text-indent: -800px;
+    overflow: hidden;
+  }
+
+  #burger li a {
+    display: block;
+    height: 1em;
+    border-top: 1px #555 solid;
+    border-bottom: 1px #555 solid;
+    background-color: #050505;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #navBar li {
+    margin-left: 3em;
+    margin-top: 2.5em;
+  }
 }
 
-header div {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
+@media screen and (min-width: 501px ) and (max-width: 1023px){
+  header nav {
+    width: 100%;
+    height: 3em;
+    background-color: #050505;
+  }
+
+  #burger li:last-child {
+    display: none;
+  }
+
+  #navBar {
+    background-color: #050505;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 500ms;
+  }
+
+  nav {
+    color: #999999;
+  }
+
+  nav:target #burger li:first-child {
+    display: none;
+  }
+
+  nav:target #burger li:last-child {
+    display: block;
+  }
+
+  nav:target #navBar{
+    height: calc(100vh - 4em);
+  }
+
+  #navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  #burger li {
+    width: 2em;
+    text-indent: -800px;
+    overflow: hidden;
+  }
+
+  #burger li a {
+    display: block;
+    height: 1em;
+    border-top: 1px #555 solid;
+    border-bottom: 1px #555 solid;
+    background-color: #050505;
+    margin-top: 1em;
+  }
+
+  #navBar li {
+    margin-left: 4em;
+    margin-top: 2.5em;
+  }
 }
 
-header div span {
-  color: #d3d3d3;
-  justify-content: left;
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+  header nav ul:first-child {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header nav ul li{
+    color: #999999;
+    margin: 0.75em 1em auto 1em;
+  }
+
+  header nav {
+    width: 100%;
+    height: 3em;
+    background-color: #050505;
+  }
 }
 
-a{
-  text-decoration: none;
-  color: #d3d3d3;
-}
 
-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+@media screen and (min-width: 1481px){
+  /* Turning off burger menu */
+  header nav ul:first-child {
+    display: none;
+  }
 
-nav ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0;
-}
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-nav li {
-  color: #d3d3d3;
-  margin: 0em 3em 0em 3em;
-  list-style: none;
+  header nav ul li{
+    color: #999999;
+    margin: 0.75em 1em auto 1em;
+  }
+
+  header nav {
+    width: 100%;
+    height: 3em;
+    background-color: #050505;
+  }
+
+  #navCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 0.75em;
+  }
 }
