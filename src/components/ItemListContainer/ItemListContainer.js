@@ -1,3 +1,4 @@
+import './ItemListContainerStyles.css';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 // import { getItems } from "./Database";
@@ -42,8 +43,8 @@ export default function ItemListContainer() {
     }, [categoryId])
 
     return (
-        <div>
-            { isLoading ? <p> loading... </p> : <ItemList items={items}/> }
-        </div>
+        <section className='itemsContainer'>
+            {isLoading ? <p> loading... </p> : <ItemList items={items}/>}
+        </section>
     );
 }

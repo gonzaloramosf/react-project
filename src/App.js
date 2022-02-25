@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // Components
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {CartProvider} from './Context/CartContext'
 // Pages
@@ -40,6 +41,7 @@ function App() {
             <Route path='*' element={<NotFoundPage/>} />
           </Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </CartProvider>
     // Falta el <Footer/>

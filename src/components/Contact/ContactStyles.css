@@ -1,0 +1,30 @@
+.contactContainer{
+    min-width: 100%;
+    height: 700px;
+    background-image: url(../images/contactBanner.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.contactCards{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 1400px;
+}
+
+.contactCards div {
+    background-color: red;
+    margin: 1em;
+    width: 600px;
+    height: 200px;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    padding-top: 4em;
+}
