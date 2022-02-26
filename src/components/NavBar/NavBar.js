@@ -9,13 +9,21 @@ export default function NavBar() {
       {/* <div>
         <span id='logo'> <Link to="/"> E-commerce </Link> </span>
       </div> */}
-      <nav id='menu'>
-          <ul id='burger'>
+      <nav>
+        <div className='menu'> 
+        <div className='burger'>
+          <ul className='burger'>
             <li><a href="#menu">abrir </a></li>
             <li><a href="#">cerrar</a></li>
           </ul>
+        </div>
 
-          <ul id='navBar'>
+        <div className='logo'>
+          <p> logo </p>
+        </div>
+
+        <div className='navBar'>
+          <ul className='navBar'>
             <li>
               <Link to='/'> Store </Link>
             </li>
@@ -25,10 +33,15 @@ export default function NavBar() {
             <li>
               <Link to='/about'> About Us </Link>
             </li>
-            {/* <Link id='navCart' to='/cart'>
-                <CartWidget/>
-            </Link> */}
           </ul>
+        </div>
+
+        <div>        
+          <Link className='navCart' to='/cart'>
+            <CartWidget/>
+          </Link> 
+        </div>
+        </div>
       </nav>
     </header>
   );
