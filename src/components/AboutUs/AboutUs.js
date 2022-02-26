@@ -2,9 +2,15 @@ import './AboutUsStyles.css';
 
 const AboutUs = () => {
     return (
-        <div>
-            <h1> About us </h1>
-        </div>
+        <section>
+            <div className='aboutBanner'>
+                <h1> About us </h1>
+            </div>
+
+            <div>
+
+            </div>
+        </section>
     )
 }
 

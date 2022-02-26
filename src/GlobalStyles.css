@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 
 a{
-    color: #999999;
+    color: #EEEEEE;
     text-decoration: none;
 }
 
@@ -13,4 +14,20 @@ li{
     list-style: none; 
 }
 
+.containerMin {
+    min-height: 100vh - 3em - 300px;
+}
+
+button {
+    background-color: #0077ED;
+    color: #EEEEEE;
+    border: 0px;
+    border-radius: 0.5rem;
+    padding: 1em;
+} 
+
+button:hover {
+    opacity: 85%;
+    cursor: pointer;
+}
 

@@ -1,5 +1,4 @@
 // +
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './GlobalStyles.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // Components
@@ -9,7 +8,6 @@ import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {CartProvider} from './Context/CartContext'
 // Pages
-import HomePage from './Pages/HomePage';
 import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
 import ContactPage from './Pages/ContactPage';
@@ -24,8 +22,8 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
+          <Route index element={<ProductsPage/>}/>
           <Route path='/'>
-            <Route index element={<HomePage/>} />
             <Route path='/products'> 
               <Route index element={<ProductsPage/>}/>
               <Route path=':itemId' element={<ItemDetailContainer/>} />

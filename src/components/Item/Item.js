@@ -6,11 +6,11 @@ const Item = ({item}) => {
 
     return (
         <div className='itemCard'>
-            <img src={require('../images/img2.jpg')} alt='capsula'/>
-            <h4> Nombre: {item.name}            </h4>
-            <p> Descripcion: {item.description} </p>
-            <p> Stock: <b>{item.stock}</b>      </p>
-            <p> Precio: <b>{item.price}</b>    </p>
+            <img src={require(`../images/${item.pictureUrl}`)} alt='capsula'/>
+            <h4> {item.name} </h4>
+            <p> {item.description} </p>
+            {/* <p> Stock: <b>{item.stock}</b> </p> */}
+            <p className='price'> <b>${item.price}</b> </p>
             <button onClick={()=> navigate(`/products/${item.id}`)}> Ver detalles </button>
         </div>
     );

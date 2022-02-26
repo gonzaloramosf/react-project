@@ -43,8 +43,20 @@ export default function ItemListContainer() {
     }, [categoryId])
 
     return (
-        <section className='itemsContainer'>
-            {isLoading ? <p> loading... </p> : <ItemList items={items}/>}
+        <section className='minHeight'>
+            <div className='categories'>
+                <select>
+                    <option> Nescafe </option>
+                    <option> Cabrales </option>
+                </select>
+
+
+                {/* <button onClick={() => navigate('/category/1')}> Nesacafe </button>
+                <button onClick={() => navigate('/category/2')}> Cabrales </button> */}
+            </div>
+            <div className='itemsContainer'>
+                {isLoading ? <p> loading... </p> : <ItemList items={items}/>}
+            </div>
         </section>
     );
 }

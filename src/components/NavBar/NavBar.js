@@ -17,10 +17,7 @@ export default function NavBar() {
 
           <ul id='navBar'>
             <li>
-              <Link to='/'> Home </Link>
-            </li>
-            <li>
-              <Link to='/products'> Products </Link>
+              <Link to='/'> Store </Link>
             </li>
             <li>
               <Link to='/contact'> Contact </Link>

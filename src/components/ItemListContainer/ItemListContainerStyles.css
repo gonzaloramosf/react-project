@@ -6,3 +6,20 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.minHeight {
+    min-height: (100vh - 3em - 300px);
+}
+
+.categories {
+    margin: auto;
+    max-width: 1260px;
+    display: flex;
+    justify-content: left;
+}
+
+.categories select {
+    width: 16em;
+    padding: 0.5rem;
+    margin: 1rem;
+}
