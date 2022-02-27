@@ -1,6 +1,36 @@
-.itemsList {
-    width: 1400px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Mobile */
+@media screen and (max-width: 500px){
+    .itemsList {
+        width: 1400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* Tablet */
+@media screen and (min-width: 501px ) and (max-width: 1023px){
+    .itemsList {
+        width: 1400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* Mediuem Desktops*/
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+    .itemsList {
+        width: 1400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* Large Desktops*/
+@media screen and (min-width: 1481px){
+    .itemsList {
+        width: 1400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

@@ -1,25 +1,112 @@
-.itemsContainer {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+/* Mobile */
+@media screen and (max-width: 500px){
+    .itemsContainer {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .minHeight {
+        min-height: (100vh - 3em - 300px);
+    }
+    
+    .categories {
+        margin: auto;
+        max-width: 1260px;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .categories select {
+        width: 16em;
+        padding: 0.5rem;
+        margin: 1rem;
+    } 
 }
-
-.minHeight {
-    min-height: (100vh - 3em - 300px);
+/* Tablets */
+@media screen and (min-width: 501px ) and (max-width: 1023px){
+    .itemsContainer {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .minHeight {
+        min-height: (100vh - 3em - 300px);
+    }
+    
+    .categories {
+        margin: auto;
+        max-width: 1260px;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .categories select {
+        width: 16em;
+        padding: 0.5rem;
+        margin: 1rem;
+    }  
 }
-
-.categories {
-    margin: auto;
-    max-width: 1260px;
-    display: flex;
-    justify-content: left;
+/* Medium Desktops */
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+    .itemsContainer {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .minHeight {
+        min-height: (100vh - 3em - 300px);
+    }
+    
+    .categories {
+        margin: auto;
+        max-width: 1260px;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .categories select {
+        width: 16em;
+        padding: 0.5rem;
+        margin: 1rem;
+    }  
 }
-
-.categories select {
-    width: 16em;
-    padding: 0.5rem;
-    margin: 1rem;
+/* Large Desktops */
+@media screen and (min-width: 1481px){
+    .itemsContainer {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .minHeight {
+        min-height: (100vh - 3em - 300px);
+    }
+    
+    .categories {
+        margin: auto;
+        max-width: 1260px;
+        display: flex;
+        justify-content: left;
+    }
+    
+    .categories select {
+        width: 16em;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
 }

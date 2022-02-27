@@ -11,36 +11,38 @@ export default function NavBar() {
       </div> */}
       <nav>
         <div className='menu'> 
-        <div className='burger'>
-          <ul className='burger'>
-            <li><a href="#menu">abrir </a></li>
-            <li><a href="#">cerrar</a></li>
-          </ul>
-        </div>
+          <div className='burger'>
+            <ul className='options'>
+              <li><a href="#menu">abrir </a></li>
+              <li><a href="#">cerrar</a></li>
+            </ul>
+          </div>
 
-        <div className='logo'>
-          <p> logo </p>
-        </div>
+          <Link to='/'>
+            <div className='logo'>
+              <h1> crocodrile </h1>
+            </div>
+          </Link>
 
-        <div className='navBar'>
-          <ul className='navBar'>
-            <li>
-              <Link to='/'> Store </Link>
-            </li>
-            <li>
-              <Link to='/contact'> Contact </Link>
-            </li>
-            <li>
-              <Link to='/about'> About Us </Link>
-            </li>
-          </ul>
-        </div>
+          <div className='navBar'>
+            <ul className='navBar'>
+              <li>
+                <Link to='/'> Store </Link>
+              </li>
+              <li>
+                <Link to='/contact'> Contact </Link>
+              </li>
+              <li>
+                <Link to='/about'> About Us </Link>
+              </li>
+            </ul>
+          </div>
 
-        <div>        
-          <Link className='navCart' to='/cart'>
-            <CartWidget/>
-          </Link> 
-        </div>
+          <div>        
+            <Link className='navCart' to='/cart'>
+              <CartWidget/>
+            </Link> 
+          </div>
         </div>
       </nav>
     </header>
