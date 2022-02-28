@@ -3,18 +3,182 @@
   header nav {
     width: 100%;
     height: 3em;
-    background-color: #050505;
+    background-color: #333333;
   }
 
+  #menu {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    background: url("../images/crocodrileG.png");
+    font-size: 0;
+    top: 8px;
+    left: 20px;
+    z-index: 2;
+    margin-top: 0.5rem;
+  }
+
+  .logo h1 {
+    font-size: 0;
+  }
+
+  .burger li:last-child {
+    display: none;
+  }
+
+  .navBar {
+    background-color: #333333;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 500ms;
+    margin-top: 3em;
+  }
+
+  nav:target .burger li:first-child {
+    display: none;
+  }
+
+  nav:target .burger li:last-child {
+    display: block;
+  }
+
+  nav:target .navBar{
+    height: calc(100vh - 3em);
+  }
+
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .burger li {
+    width: 2em;
+    text-indent: -800px;
+    overflow: hidden;
+    margin-left: 1.5em;
+  }
+
+  .burger li a {
+    display: block;
+    height: 1em;
+    border-top: 1px #FFFFFF solid;
+    border-bottom: 1px #FFFFFF solid;
+    background-color: #333333;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .navBar li {
+    margin-left: 4em;
+    margin-top: 2.5em;
+  }
+
+  .navCart {
+    margin-right: 1em;
+    margin-top: 0.5em;
+  }
 }
 /* Tablet */
 @media screen and (min-width: 501px ) and (max-width: 1023px){
   header nav {
     width: 100%;
     height: 3em;
-    background-color: #050505;
+    background-color: #333333;
   }
 
+  #menu {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    background: url("../images/crocodrileG.png");
+    font-size: 0;
+    top: 8px;
+    left: 20px;
+    z-index: 2;
+    margin-top: 0.5rem;
+  }
+
+  .logo h1 {
+    font-size: 0;
+  }
+
+  .burger li:last-child {
+    display: none;
+  }
+
+  .navBar {
+    background-color: #333333;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 500ms;
+    margin-top: 3em;
+  }
+
+  nav:target .burger li:first-child {
+    display: none;
+  }
+
+  nav:target .burger li:last-child {
+    display: block;
+  }
+
+  nav:target .navBar{
+    height: calc(100vh - 3em);
+  }
+
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .burger li {
+    width: 2em;
+    text-indent: -800px;
+    overflow: hidden;
+    margin-left: 1.5em;
+  }
+
+  .burger li a {
+    display: block;
+    height: 1em;
+    border-top: 1px #FFFFFF solid;
+    border-bottom: 1px #FFFFFF solid;
+    background-color: #333333;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .navBar li {
+    margin-left: 4em;
+    margin-top: 2.5em;
+  }
+
+  .navCart {
+    margin-right: 1em;
+    margin-top: 0.5em;
+  }
 }
 /* Medium Deskptops*/
 @media screen and (min-width: 1024px ) and (max-width: 1480px){
@@ -22,13 +186,13 @@
     display: none;
   }
 
-  header nav {
+  header {
     width: 100%;
     height: 3em;
     background-color: #333333;
   }
 
-  .menu {
+  #menu {
     margin: auto;
     max-width: 1200px;
     display: flex;
@@ -56,11 +220,10 @@
   .navBar{
     display: flex;
     margin-top: 0.5rem;
-    
   }
 
   .navBar li {
-    margin-right: 1rem;
+    margin: 0.5em 0.5em 0.5em 0.5em;
   }
 
   .navCart{
@@ -76,13 +239,13 @@
     display: none;
   }
 
-  header nav {
+  header {
     width: 100%;
     height: 3em;
     background-color: #333333;
   }
 
-  .menu {
+  #menu {
     margin: auto;
     max-width: 1200px;
     display: flex;
@@ -112,6 +275,7 @@
   }
 
   .navBar li {
+    margin-top: 0.5em;
     margin-right: 1rem;
   }
 
