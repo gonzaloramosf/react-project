@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import 'firebase/auth';
 
 // Your web app's Firebase configuration
 // const firebaseConfig = {
@@ -22,4 +23,7 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 
 export const getFirebase = () => app;
+// CartContext
 export const getFirestore = () => firebase.firestore(app);
+// UserContext
+export const getAuth = () => firebase.auth(app);

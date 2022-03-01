@@ -11,7 +11,7 @@ const Item = ({item}) => {
             <p> {item.description} </p>
             {/* <p> Stock: <b>{item.stock}</b> </p> */}
             <p className='price'> <b>${item.price}</b> </p>
-            <button onClick={()=> navigate(`/products/${item.id}`)}> Ver detalles </button>
+            <button onClick={()=> navigate(`/products/${item.id}`)}> View details </button>
         </div>
     );
 }
