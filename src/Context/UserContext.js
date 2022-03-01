@@ -17,6 +17,8 @@ export const UserProvider = ({children}) => {
         const googleProvider = new firebase.auth.GoogleAuthProvider();
         return getAuth().signInWithPopup(googleProvider);
     }
+    const passwordForgot = (email) => getAuth().sendPasswordResetEmail(email);
+
 
     useEffect(() => {
         const unsuscribe = getAuth().onAuthStateChanged( currentUser => {
@@ -29,7 +31,7 @@ export const UserProvider = ({children}) => {
     // user se puede utilizar para mostrar los datos del usuario logeado
 
     return (
-        <UserContext.Provider value={{signUp, logIn, user, logOut, isLoading, loginWithGoogle}}>
+        <UserContext.Provider value={{signUp, logIn, user, logOut, isLoading, loginWithGoogle, passwordForgot}}>
             { children }
         </UserContext.Provider>
     )

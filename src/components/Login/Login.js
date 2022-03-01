@@ -5,7 +5,7 @@ import AlertError from '../AlertError/AlertError';
 
 const Login = () => {
     const navigate = useNavigate();
-    const {logIn, loginWithGoogle} = useUser();
+    const {logIn, loginWithGoogle, passwordForgot} = useUser();
     const [error, setError] = useState();
     const [user, setUser] = useState({
         email: '',
@@ -13,7 +13,7 @@ const Login = () => {
     });
 
     const handleChange = ({target: {name, value}}) => {
-        setUser({...user, [name]: value})
+        setUser({...user, [name]: value});
     };
 
     const handleSubmit = async (e) => {
@@ -34,7 +34,17 @@ const Login = () => {
         }catch (error) {
             setError(error.message);
         }
-    }
+    };
+
+    const handleForgotPassword = async () => {
+        if (!user.email) return setError('Por favor ingrese su email');
+        try {
+            await passwordForgot(user.email);
+            // message we sent link to recover password
+        }catch(error) {
+            setError(error.message);
+        };
+    };
 
     return (
         <div>
@@ -48,10 +58,11 @@ const Login = () => {
                 <input type='password' name='password' id="password" onChange={handleChange} />
 
                 <button> Login </button>
+                <a href="#!" style={{color:'blue'}} onClick={handleForgotPassword}>  Forgot password ?</a>
             </form>
             <button onClick={handleGoogleLogin}> Login with Google </button>
         </div>
-    )
+    );
 }
 
 export default Login;
