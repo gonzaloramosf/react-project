@@ -17,6 +17,7 @@ import CheckoutPage from './Pages/CheckoutPage';
 import PurchaseReceivedPage from './Pages/PurchaseReceivedPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 function App() {
   return (
@@ -38,7 +39,13 @@ function App() {
               </Route>
               <Route path='/purchasereceived/:orderId' element={<PurchaseReceivedPage/>}/>
               <Route path='/contact' element={<ContactPage/>} />
-              <Route path='/about' element={<AboutUsPage/>} />
+
+              <Route path='/about' element={
+              <ProtectedRoute>
+                <AboutUsPage/>
+              </ProtectedRoute>} 
+              />
+              
               <Route path='/login' element={<LoginPage/>} />
               <Route path='/register' element={<RegisterPage/>} />
               <Route path='*' element={<NotFoundPage/>} />

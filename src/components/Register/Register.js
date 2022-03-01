@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../Context/UserContext";
+import AlertError from "../AlertError/AlertError";
 
 const Register = () => {
     const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Register = () => {
     return (
         <div>
             <h2> register </h2>
-            {error && <p>{error}</p>}
+            {error && <AlertError message={error}/>}
             <form onSubmit={handleSubmit}>
                 <label htmlFor='email'> Email </label>
                 <input type='email' name='email' placeholder="email@example.com" onChange={handleChange} />
