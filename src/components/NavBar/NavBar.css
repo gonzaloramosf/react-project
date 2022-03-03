@@ -279,8 +279,19 @@
     margin-right: 1rem;
   }
 
-  .navCart{
+
+  .prof {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navCart {
     margin-top: 0.5rem;
+  }
+
+  .navProfile {
+    margin-top: 0.6rem;
+    margin-left: 1em;
   }
 }

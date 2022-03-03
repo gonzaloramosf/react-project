@@ -1,0 +1,20 @@
+@media screen and (max-width: 500px){
+
+}
+/* Tablets */
+@media screen and (min-width: 501px ) and (max-width: 1023px){
+
+}
+/* Medium Desktops */
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+
+}
+/* Large Desktops */
+@media screen and (min-width: 1481px){
+    .itemDetailContainer {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        min-height: 535px;
+    }
+}

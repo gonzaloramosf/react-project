@@ -1,0 +1,23 @@
+.itemDetail {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.itemDetail img {
+    max-width: 400px;
+}
+
+.itemDetail div:last-child {
+    margin-top: 4em;
+    margin-left: 4em;
+}
+
+.itemDetail button {
+    margin: 1em 1em 1em 0em;
+    padding: 1em;
+}
+
+.toCart {
+    width: 184px;
+}

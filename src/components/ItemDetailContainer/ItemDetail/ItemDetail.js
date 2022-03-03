@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../../Context/CartContext';
 import ItemCount from "./ItemCount/ItemCount";
-
+import './ItemDetailStyles.css';
 
 const ItemDetail = ( {item} ) => {
     const navigate = useNavigate();
@@ -17,15 +17,17 @@ const ItemDetail = ( {item} ) => {
     // }
 
     return (
-        <div key={item.id}>
-            <img src="#" alt="imgagen del producto"/>
+        <div className='itemDetail' key={item.id}>
             <div>
-                <h1>{item.name}</h1>
-                <h3>{item.price}</h3>
+                <img src={require(`../../images/${item.pictureUrl}`)} alt="Product"/>
+            </div>
+            <div>
+                <h2>{item.name}</h2>
                 <p>{item.description}</p>
                 <p> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                <h3>${item.price}</h3>
                 <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
-                <button onClick={()=> navigate(`/cart`)}> Ir al carrito </button>
+                <button className='toCart' onClick={()=> navigate(`/cart`)}> To checkout </button>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import './NavBar.css';
 import '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
+import ProfileWidget from '../ProfileWidget/ProfileWidget';
 
 export default function NavBar() {
   return (
@@ -12,7 +13,7 @@ export default function NavBar() {
       <nav id='menu'>
         <ul className='burger'>
           <li><a href="#menu">abrir </a></li>
-          <li><a href="#">cerrar</a></li>
+          <li><a href="#!">cerrar</a></li>
         </ul>
  
         <Link to='/'>
@@ -33,9 +34,15 @@ export default function NavBar() {
           </li>
         </ul>
 
-        <Link className='navCart' to='/cart'>
-          <CartWidget/>
-        </Link> 
+        <div className='prof'>
+          <Link className='navCart' to='/cart'>
+            <CartWidget/>
+          </Link>
+
+          <Link className='navProfile' to='/login'>
+            <ProfileWidget/>
+          </Link>
+        </div> 
       </nav>
     </header>
   );

@@ -12,7 +12,7 @@ export default function CartWidget() {
         <div>
             <div id='cartNumberFlex'>
                 {totalItems >= 1 ? <p> {totalItems} </p> : null}
-                <BsCart3 className='cart'/>
+                <BsCart3 size={24} className='cart'/>
             </div>
         </div>
     );

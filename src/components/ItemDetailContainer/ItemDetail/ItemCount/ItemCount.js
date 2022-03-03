@@ -11,7 +11,7 @@ export default function ItemCount({stock, initial, onAdd}) {
     };
 
     const remove = () => {
-        if (quantity < 1) {
+        if (quantity < 2) {
             setQuantity((prevState) => prevState - 0)
         }
         else {
@@ -24,7 +24,7 @@ export default function ItemCount({stock, initial, onAdd}) {
             <h3> Cantidad = {quantity} </h3>
             <button onClick={add}>  + </button>
             <button onClick={remove}> - </button>
-            <button onClick={() => onAdd(quantity)}> Agregar al carrito </button>
+            <button onClick={() => onAdd(quantity)}> Add to cart </button>
         </div>
     );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from './ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import { getFirestore } from "../../firebase";
+import './ItemDetailContainerStyles.css'
 
 export default function ItemDetailContainer() {
     const {itemId} = useParams();
@@ -20,7 +21,7 @@ export default function ItemDetailContainer() {
     }, [itemId]);
 
     return (
-        <div>
+        <div className="itemDetailContainer">
             { isLoading || !item ? <p> loading... </p> : <ItemDetail item={item}/> }
         </div>
     );
