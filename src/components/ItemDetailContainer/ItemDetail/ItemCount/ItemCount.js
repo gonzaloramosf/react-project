@@ -7,16 +7,16 @@ export default function ItemCount({stock, initial, onAdd}) {
     const add = () => {
         if (quantity < stock) {
             setQuantity((prevState)=> prevState + 1);
-        }
+        };
     };
 
     const remove = () => {
         if (quantity < 2) {
-            setQuantity((prevState) => prevState - 0)
+            setQuantity((prevState) => prevState - 0);
         }
         else {
-            setQuantity((prevState) => prevState - 1)
-        }
+            setQuantity((prevState) => prevState - 1);
+        };
     };
 
     return (

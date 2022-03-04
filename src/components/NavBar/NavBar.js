@@ -1,10 +1,24 @@
 import './NavBar.css';
 import '../CartWidget/CartWidget';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import ProfileWidget from '../ProfileWidget/ProfileWidget';
+import { useUser } from '../../Context/UserContext';
 
 export default function NavBar() {
+  const { user } = useUser();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (user) {
+      navigate('/profile');
+    }
+    else {
+      navigate('/login');
+    }
+  }
+
+
   return (
     <header>
       {/* <div>
@@ -39,9 +53,9 @@ export default function NavBar() {
             <CartWidget/>
           </Link>
 
-          <Link className='navProfile' to='/login'>
+          <button onClick={handleClick} className='navProfile'>
             <ProfileWidget/>
-          </Link>
+          </button>
         </div> 
       </nav>
     </header>

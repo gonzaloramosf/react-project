@@ -6,13 +6,19 @@ const Cart = () => {
     const {cart, removeItem, clearCart, totalPrice} = useCart();
     const navigate = useNavigate();
 
+    if (cart.length === 0) {
+        return (
+            <div>
+                <p> empty </p>
+            </div>
+        )
+    }
 
     return (
         <section>
             <div className='cartTitle'>
                 <h2> Cart </h2>
             </div> 
-
             <div className='buyList'> 
                 {cart.map((purchase) => {
                     return (

@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {CartProvider} from './Context/CartContext'
 import {UserProvider} from './Context/UserContext';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 // Pages
 import AboutUsPage from './Pages/AboutUsPage';
 import ProductsPage from './Pages/ProductsPage';
@@ -17,7 +18,7 @@ import CheckoutPage from './Pages/CheckoutPage';
 import PurchaseReceivedPage from './Pages/PurchaseReceivedPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
-import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import ProfilePage from './Pages/ProfilePage'
 
 function App() {
   return (
@@ -39,13 +40,12 @@ function App() {
               </Route>
               <Route path='/purchasereceived/:orderId' element={<PurchaseReceivedPage/>}/>
               <Route path='/contact' element={<ContactPage/>} />
-
-              <Route path='/about' element={
+              <Route path='/about' element={<AboutUsPage/>} />
+              <Route path='/profile' element={
               <ProtectedRoute>
-                <AboutUsPage/>
+                <ProfilePage/>
               </ProtectedRoute>} 
               />
-              
               <Route path='/login' element={<LoginPage/>} />
               <Route path='/register' element={<RegisterPage/>} />
               <Route path='*' element={<NotFoundPage/>} />

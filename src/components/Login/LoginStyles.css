@@ -1,0 +1,111 @@
+/* Mediuem Desktops*/
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+    .login {
+        width: 800px;
+        margin: auto;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 440px);
+    }
+
+    .login h2 {
+        margin: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .login div:first-child {
+        margin: auto;
+        padding: 2em;
+        border-radius: 1px;
+        background: #D3D3D3;
+        border: 1px solid #EEEEEE;
+    }
+
+    .login div:first-child button:last-child {
+        margin-top: 3em;
+    }
+    
+    .login form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .login input {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+        border: solid 1px #eeeeee;
+    }
+    
+    .login button {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+    }
+
+    .forgotPass {
+        color: #8C8D8E;
+        margin: 8px;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+/* Large Desktops */
+@media screen and (min-width: 1481px) {
+    .login {
+        width: 1200px;
+        margin: auto;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 440px);
+    }
+
+    .login h2 {
+        margin: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .login div:first-child {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 2em;
+        border-radius: 1px;
+        background: #D3D3D3;
+        border: 1px solid #EEEEEE;
+    }
+    
+    .login form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .login input {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+        border: solid 1px #eeeeee;
+    }
+    
+    .login button {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+    }
+
+    .login div div:last-child {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .forgotPass {
+        color: #8C8D8E;
+        margin: 8px;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+

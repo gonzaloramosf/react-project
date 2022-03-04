@@ -14,10 +14,6 @@ li{
     list-style: none; 
 }
 
-.containerMin {
-    min-height: 100vh - 3em - 300px;
-}
-
 button {
     background-color: #0077ED;
     color: #EEEEEE;

@@ -3,11 +3,14 @@ export const CartContext = createContext([]);
 
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([]);
+    const localData = JSON.parse(localStorage.getItem('cart'));
+    const [cart, setCart] = useState(localData);
     const [totalPrice, setTotalPrice] = useState();
     const[totalItems, setTotalItems] = useState(0);
-    // const [error, setError] = useState(null);
-    // const [isLoading, setIsLoading] = useState(false);
+
+    useEffect( () => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart] );
 
     useEffect(() =>{
         let totItems = 0;

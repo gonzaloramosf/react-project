@@ -1,0 +1,6 @@
+.alertMessage {
+    display: flex;
+    max-width: 270px;
+    color: red;
+    margin: 8px;
+}

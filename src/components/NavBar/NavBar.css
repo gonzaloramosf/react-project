@@ -226,10 +226,19 @@
     margin: 0.5em 0.5em 0.5em 0.5em;
   }
 
-  .navCart{
+  .prof {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navCart {
     margin-top: 0.5rem;
-    margin-right: 16px;
+  }
+
+  .navProfile {
+    margin-top: 0.6rem;
+    margin-left: 1em;
   }
 }
 /* Large Desktops */

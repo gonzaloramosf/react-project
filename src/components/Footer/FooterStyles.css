@@ -116,7 +116,7 @@
     }
 
     footer ul {
-        margin: 4em;
+        margin: 3em 4em 4em 4em;
         color: #8C8D8E;
     }
 
@@ -167,12 +167,12 @@
     }
 
     footer ul {
-        margin: 4em;
+        margin: 3em 4em 4em 4em;
         color: #8C8D8E;
     }
 
     footer li {
-        padding-bottom: 1em;
+        padding-bottom: 16px;
     }
 
     footer li:hover{

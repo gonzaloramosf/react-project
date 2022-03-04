@@ -6,7 +6,7 @@ import './ItemDetailContainerStyles.css'
 
 export default function ItemDetailContainer() {
     const {itemId} = useParams();
-    const [item, setItem] = useState();
+    const [item, setItem] = useState(undefined);
     const [isLoading, setIsLoading] = useState(false);
     
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function ItemDetailContainer() {
         const itemsCollection = dataBase.collection('items');
         const requiredItem = itemsCollection.doc(itemId);
 
-        requiredItem.get().then(response => {(!response.exists) ? console.log('product dont found') : setItem({...response.data(), id: response.id})})
+        requiredItem.get().then(response => {(!response.exists) ? console.log('Product dont exist!') : setItem({...response.data(), id: response.id})})
                           .catch(error => {console.log('Error seraching required item ', error)})
                           .finally(() => setIsLoading(false)); 
     }, [itemId]);

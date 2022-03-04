@@ -48,7 +48,7 @@ const Checkout = () => {
 
     return (
         <div>
-            <h1> Resumen de compra </h1>
+            <h2> Summary </h2>
             {cart.map((cart) => {
                 return (
                     <div key={cart.item.id}>
@@ -57,7 +57,7 @@ const Checkout = () => {
                     </div>
                 )
             })}
-            <h2> Ingrese sus datos de facturacion </h2>
+            <h3> Billing dates </h3>
             <form onSubmit={handleSumbit}>
                 <label htmlFor='name'> Nombre </label>
                 <input type='text' id='name' name='name' placeholder='Nombre' 
@@ -65,7 +65,6 @@ const Checkout = () => {
                 <label htmlFor='phone'> Celular </label>
                 <input type='number' id='phone' name='phone' placeholder='Numero celular' 
                        value={phone} onChange={e=>setPhone(e.target.value)}/>
-
                 <input type='submit' value='Finalizar compra' />
             </form>
         </div>

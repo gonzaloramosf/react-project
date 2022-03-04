@@ -1,6 +1,8 @@
+import './AlertErrorStyles.css'
+
 const AlertError = ({message}) => {
     return <div>
-        <span> {message} </span>
+        <span className='alertMessage'> {message} </span>
     </div>
 }
 

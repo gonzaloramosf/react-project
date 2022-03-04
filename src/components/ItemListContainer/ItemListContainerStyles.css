@@ -100,14 +100,16 @@
     
     .categories {
         margin: auto;
+        margin-top: 1em;
         max-width: 1260px;
         display: flex;
+        flex-direction: column;
         justify-content: left;
+        position: relative;
     }
-    
+
     .categories select {
-        width: 16em;
-        padding: 0.5rem;
-        margin: 1rem;
+        width: 240px;
+        padding: 8px;
     }
 }
