@@ -1,5 +1,5 @@
 ## `Proyecto creado con Create React App`
-Documentación para empezar en React:
+Documentación para empezar en React:  
 https://create-react-app.dev/docs/getting-started
 
 ### Git clone
@@ -13,7 +13,7 @@ Y presionando enter dentro de tu GitBash se clonara.
 Dentro del proyecto, puedes correr:  
 `npm start` para correr el proyectos
 
-Capaz debas instalar los scripts necesarios del proyecto:
+Capaz debas instalar los scripts necesarios del proyecto:  
 https://docs.npmjs.com/cli/v8/using-npm/scripts
 
 ### Variable de entorno env.example
