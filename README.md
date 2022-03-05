@@ -1,8 +1,8 @@
-## Proyecto creado con Create React App
+## `Proyecto creado con Create React App`
 Documentación para empezar en React:
 https://create-react-app.dev/docs/getting-started
 
-### `Git clone`
+### Git clone
 Abrir GitBash.  
 Elegir la dirección donde deseas clonarlo.  
 Escribir:  
@@ -16,7 +16,10 @@ Dentro del proyecto, puedes correr:
 Capaz debas instalar los scripts necesarios del proyecto:
 https://docs.npmjs.com/cli/v8/using-npm/scripts
 
-### `Sobre el proyecto`
+### Variable de entorno env.example
+Podemos acceder a las mismas dentro de env.example.
+
+### Sobre el proyecto
 
 El siguiente proyecto sirve como ejemplo de desarrollo de una App web con ReactJS y utilizando Firebase como base de datos. Se construyó un e-commerce de tecnología y productos relacionadas que cuenta con las siguientes características:
 
