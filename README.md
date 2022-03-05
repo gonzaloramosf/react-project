@@ -6,7 +6,7 @@ https://create-react-app.dev/docs/getting-started
 Abrir GitBash.  
 Elegir la dirección donde deseas clonarlo.  
 Escribir:  
-git clone https://github.com/gonzaloramosf/reactProject.git  
+`git clone https://github.com/gonzaloramosf/reactProject.git`  
 Y presionando enter dentro de tu GitBash se clonara.
 
 ### Scripts disponibles
@@ -17,7 +17,7 @@ Capaz debas instalar los scripts necesarios del proyecto:
 https://docs.npmjs.com/cli/v8/using-npm/scripts
 
 ### Variable de entorno env.example
-Podemos acceder a las mismas dentro de env.example.
+Podemos acceder a las mismas dentro de `env.example`
 
 ### Sobre el proyecto
 
