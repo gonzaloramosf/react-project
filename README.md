@@ -21,7 +21,8 @@ https://docs.npmjs.com/cli/v8/using-npm/scripts
 El siguiente proyecto sirve como ejemplo de desarrollo de una App web con ReactJS y utilizando Firebase como base de datos. Se construyó un e-commerce de tecnología y productos relacionadas que cuenta con las siguientes características:
 
 El manejo de productos dentro de la App permite la función de agregar al carrito.  
-Carrito interactivo: el usuario puede agregar varias unidades de un mismo producto al mismo tiempo y no perder la cuenta gracias a la incorporación de un contador en el cart widget. También se implementó el uso de localStorage para que el carrito sea persistente y no se pierdan los productos por algún refresh no deseado de la página.  
+Carrito interactivo: el usuario puede agregar varias unidades de un mismo producto al mismo tiempo y no perder la cuenta gracias a la incorporación de un contador en el cart widget.  
+También se implementó el uso de localStorage para que el carrito sea persistente y no se pierdan los productos por algún refresh no deseado de la página.  
 Los productos están presentes en el Home de la App y pueden filtrarse por categorías.  
 Para la navegación de las diferentes rutas de la App se utilizó react-router-dom.  
 
@@ -37,5 +38,5 @@ Diseño responsive para una correcta visualización en distintos dispositivos, u
 Librerías extra:  
 Se implemento una herramienta extra al proyecto para obtener iconos que fueron utilizados en el NavBar:
 
-React Icons  
+React Icons:  
 Para el manejo de los iconos, React Icons recopila una gran variedad de iconos de diferentes librerías. (https://react-icons.github.io/react-icons/)
