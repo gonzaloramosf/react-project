@@ -13,8 +13,8 @@ const Cart = () => {
             <div>
                 <p> empty </p>
             </div>
-        )
-    }
+        );
+    };
 
     return (
         <section>

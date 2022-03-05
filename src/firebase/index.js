@@ -11,14 +11,6 @@ const firebaseConfig = {
     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
     appId: process.env.REACT_APP_APP_ID
 };
-//  const firebaseConfig = {
-//      apiKey: "AIzaSyB22dUG1EUwm7Tw-PdMMFYUaxHC1BF48gU",
-//      authDomain: "react-project-25395.firebaseapp.com",
-//      projectId: "react-project-25395",
-//      storageBucket: "react-project-25395.appspot.com",
-//      messagingSenderId: "565160456293",
-//      appId: "1:565160456293:web:5b96b86fa7b15ca396568c"
-//  };
 
 const app = firebase.initializeApp(firebaseConfig);
 
