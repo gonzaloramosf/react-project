@@ -3,14 +3,14 @@ Documentación para empezar en React:
 https://create-react-app.dev/docs/getting-started
 
 ## `Git clone`
-Abrir GitBash.
-Elegir la dirección donde deseas clonarlo.
-Escribir:
-git clone https://github.com/gonzaloramosf/reactProject.git
+Abrir GitBash.  
+Elegir la dirección donde deseas clonarlo.  
+Escribir:  
+git clone https://github.com/gonzaloramosf/reactProject.git  
 Y presionando enter dentro de tu GitBash se clonara.
 
 ## Scripts disponibles
-Dentro del proyecto, puedes correr:
+Dentro del proyecto, puedes correr:  
 ### `npm start`
 
 Capaz debas instalar los scripts necesarios del proyecto:
