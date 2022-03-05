@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getFirestore } from "../../firebase";
+import { useUser } from "../../Context/UserContext";
 
 const PurchaseReceived= () => {
+    const {user} = useUser();
     const {orderId} = useParams();
     const [order, setOrder] = useState();
     const [isLoading, setIsLoading] = useState();
@@ -21,8 +23,9 @@ const PurchaseReceived= () => {
             {
                 isLoading || !order ? <p> loading... </p> :
                 <div> 
-                    <h1> Gracias por su compra {order.buyer.name}</h1>
-                    <h2> Detalles de su compra: {order.items.cart[0].item.name}</h2>
+                    <h1> Thanks {order.buyer.name}</h1>
+                    <h2> Order details: {order.items.cart[0].item.name}</h2>
+                    <p> Email: {user.email}</p>
                 </div>
             }
         </div>

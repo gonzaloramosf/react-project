@@ -8,12 +8,12 @@ const Profile = () => {
 
     const handleClick = async () => {
         await logOut();
-        navigate('/')
-    }
+        navigate('/');
+    };
 
     if (isLoading) {
         return <p> loading ..</p>
-    }
+    };
 
     return (
         <section>
@@ -26,7 +26,7 @@ const Profile = () => {
                 <button onClick={handleClick}> log out </button>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Profile;

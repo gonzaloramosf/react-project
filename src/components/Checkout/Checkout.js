@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useCart} from '../../Context/CartContext';
+import { useUser } from '../../Context/UserContext';
 import { getFirestore } from "../../firebase";
 
 const Checkout = () => {
+    const {user} = useUser();
     const {cart} = useCart();
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -43,16 +45,17 @@ const Checkout = () => {
                                    console.log('compra realizada', res.id)
                                    navigate(`/purchasereceived/${res.id}`)
                             })
-                               .catch((err) => console.log('error', err))
+                               .catch((err) => console.log('error', err));
     }
 
     return (
         <div>
             <h2> Summary </h2>
+            <p> You: {user.displayName || user.email} </p>
             {cart.map((cart) => {
                 return (
                     <div key={cart.item.id}>
-                        <p>Nombre: {cart.item.id}</p>
+                        <p>Item id: {cart.item.id}</p>
                         <p>${cart.item.price * cart.quantity}</p>
                     </div>
                 )
@@ -65,7 +68,7 @@ const Checkout = () => {
                 <label htmlFor='phone'> Celular </label>
                 <input type='number' id='phone' name='phone' placeholder='Numero celular' 
                        value={phone} onChange={e=>setPhone(e.target.value)}/>
-                <input type='submit' value='Finalizar compra' />
+                <input type='submit' value='Buy' />
             </form>
         </div>
     )

@@ -36,7 +36,11 @@ function App() {
               <Route path='/category/:categoryId' element={<ProductsPage/>}/>
               <Route path='/cart'>
                 <Route index element={<CartPage/>} />
-                <Route path='/cart/checkout' element={<CheckoutPage/>} />
+                <Route path='/cart/checkout' element={
+                <ProtectedRoute>
+                  <CheckoutPage/>
+                </ProtectedRoute>}
+                />
               </Route>
               <Route path='/purchasereceived/:orderId' element={<PurchaseReceivedPage/>}/>
               <Route path='/contact' element={<ContactPage/>} />

@@ -38,7 +38,7 @@ const Login = () => {
     };
 
     const handleForgotPassword = async () => {
-        if (!user.email) return setError('Por favor ingrese su email');
+        if (!user.email) return setError('Type your Email Adress and press Login. You will receive an email for recovery password.');
         try {
             await passwordForgot(user.email);
             // message we sent link to recover password

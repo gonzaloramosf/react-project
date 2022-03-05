@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import {useCart} from '../../Context/CartContext';
+import { useUser } from '../../Context/UserContext';
 import './CartStyles.css'
 
 const Cart = () => {
     const {cart, removeItem, clearCart, totalPrice} = useCart();
+    const { user } = useUser();
     const navigate = useNavigate();
 
     if (cart.length === 0) {
@@ -34,7 +36,7 @@ const Cart = () => {
 
             <div className='buttons'>
                 <button onClick={clearCart}> Empty cart </button>
-                <button onClick={() => navigate('/cart/checkout')}> Checkout </button>
+                <button onClick={() => {user ? navigate('/cart/checkout') : navigate('/login')} }> Checkout </button>
             </div>
         </section>
     )

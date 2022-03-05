@@ -1,6 +1,6 @@
 import './ItemListContainerStyles.css';
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getFirestore } from "../../firebase";
 import ItemList from "./ItemList/ItemList";
 
@@ -9,7 +9,6 @@ export default function ItemListContainer() {
     const {categoryId} = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [category, setCategory] = useState();
-    const navigate = useNavigate();
 
     useEffect(() => {
         setIsLoading(true);
