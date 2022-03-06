@@ -20,8 +20,8 @@ export default function ItemCount({stock, initial, onAdd}) {
     };
 
     return (
-        <div>
-            <h3> Cantidad = {quantity} </h3>
+        <div className='countContainer'>
+            <h3> Quantity = {quantity} </h3>
             <button onClick={add}>  + </button>
             <button onClick={remove}> - </button>
             <button onClick={() => onAdd(quantity)}> Add to cart </button>

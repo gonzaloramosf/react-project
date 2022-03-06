@@ -1,5 +1,165 @@
-@media screen and (min-width: 1024px ) and (max-width: 1480px){
+@media screen and (max-width: 500px) {
+    .register {
+        width: 300px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 416px);
+    }
 
+    .register h2 {
+        margin: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .register div:first-child {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 24px;
+        border-radius: 1px;
+        background: #D3D3D3;
+        border: 1px solid #EEEEEE;
+    }
+    
+    .register form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .register input {
+        width: 220px;
+        padding: 1em;
+        margin: 8px;
+        border: solid 1px #eeeeee;
+    }
+    
+    .register button {
+        width: 220px;
+        padding: 1em;
+        margin: 8px;
+    }
+
+    .register div div:last-child {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .register span {
+        margin-top: 8px;
+        margin-left: 12px;
+    }
+}
+
+@media screen and (min-width: 501px ) and (max-width: 1023px) {
+    .register {
+        width: 500px;
+        margin: auto;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 416px);
+    }
+
+    .register h2 {
+        margin: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .register div:first-child {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 2em;
+        border-radius: 1px;
+        background: #D3D3D3;
+        border: 1px solid #EEEEEE;
+    }
+    
+    .register form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .register input {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+        border: solid 1px #eeeeee;
+    }
+    
+    .register button {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+    }
+
+    .register div div:last-child {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .register span {
+        margin-top: 8px;
+        margin-left: 12px;
+    }
+}
+
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+    .register {
+        width: 1000px;
+        margin: auto;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 440px);
+    }
+
+    .register h2 {
+        margin: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .register div:first-child {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 2em;
+        border-radius: 1px;
+        background: #D3D3D3;
+        border: 1px solid #EEEEEE;
+    }
+    
+    .register form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .register input {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+        border: solid 1px #eeeeee;
+    }
+    
+    .register button {
+        width: 280px;
+        padding: 1em;
+        margin: 8px;
+    }
+
+    .register div div:last-child {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .register span {
+        margin-top: 8px;
+        margin-left: 8px;
+    }
 }
 
 @media screen and (min-width: 1481px) {
@@ -49,5 +209,10 @@
         display: flex;
         flex-direction: column;
         margin-top: 2em;
+    }
+
+    .register span {
+        margin-top: 8px;
+        margin-left: 8px;
     }
 }

@@ -8,13 +8,8 @@ const ItemDetail = ( {item} ) => {
     const { addItem } = useCart();
 
     const onAdd = ( quantity ) => {
-        // handleClick(quantity);
         addItem(item, quantity);
-    }
-
-    // const handleClick = (quantity) => {
-    //     addItem(item, quantity);
-    // }
+    };
 
     return (
         <div className='itemDetail' key={item.id}>
@@ -24,13 +19,12 @@ const ItemDetail = ( {item} ) => {
             <div>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
-                <p> Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                <h3>Stock: {item.stock}</h3>
                 <h3>${item.price}</h3>
                 <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
                 <button className='toCart' onClick={()=> navigate(`/cart`)}> To checkout </button>
             </div>
         </div>
-    )
-}
-
+    );
+};
 export default ItemDetail;

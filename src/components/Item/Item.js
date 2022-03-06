@@ -6,10 +6,8 @@ const Item = ({item}) => {
 
     return (
         <div className='itemCard'>
-            <img src={require(`../images/${item.pictureUrl}`)} alt='capsula'/>
+            <img src={require(`../images/${item.pictureUrl}`)} alt='Product'/>
             <h4> {item.name} </h4>
-            <p> {item.description} </p>
-            {/* <p> Stock: <b>{item.stock}</b> </p> */}
             <p className='price'> <b>${item.price}</b> </p>
             <button onClick={()=> navigate(`/products/${item.id}`)}> View details </button>
         </div>

@@ -1,23 +1,147 @@
-.itemDetail {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-}
+@media screen and (max-width: 500px){
+    .itemDetail {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
 
-.itemDetail img {
-    max-width: 400px;
-}
+    .itemDetail div:last-child h3{
+        padding-bottom: 8px;
+    }
+    
+    .itemDetail img {
+        margin-top: 2em;
+        max-width: 280px;
+    }
+    
+    .itemDetail div:last-child {
+        margin-top: 1em;
 
-.itemDetail div:last-child {
-    margin-top: 4em;
-    margin-left: 4em;
-}
+    }
 
-.itemDetail button {
-    margin: 1em 1em 1em 0em;
-    padding: 1em;
-}
+    .itemDetail h2 {
+        font-size: 20px;
+    }
 
-.toCart {
-    width: 184px;
+    .itemDetail h3 {
+        font-size: 16px;
+    }
+    
+    .itemDetail button {
+        margin: 1em 1em 1em 0em;
+        padding: 1em;
+    }
+    
+    .itemDetail p {
+        width: 280px;
+    }
+    
+    .toCart {
+        justify-content: center;
+        width: 280px;
+    }
+}
+/* Tablets */
+@media screen and (min-width: 501px ) and (max-width: 1023px){
+    .itemDetail {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .itemDetail div:last-child h3{
+        padding-bottom: 8px;
+    }
+    
+    .itemDetail img {
+        margin-top: 2em;
+        max-width: 300px;
+    }
+    
+    .itemDetail div:last-child {
+        margin-top: 4em;
+        margin-left: 2em;
+    }
+    
+    .itemDetail button {
+        margin: 1em 1em 1em 0em;
+        padding: 1em;
+    }
+    
+    .itemDetail p {
+        width: 340px;
+    }
+    
+    .toCart {
+        width: 184px;
+    }
+}
+/* Medium Desktops */
+@media screen and (min-width: 1024px ) and (max-width: 1480px){
+    .itemDetail {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .itemDetail div:last-child h3{
+        padding-bottom: 8px;
+    }
+    
+    .itemDetail img {
+        max-width: 400px;
+    }
+    
+    .itemDetail div:last-child {
+        margin-top: 4em;
+        margin-left: 4em;
+    }
+    
+    .itemDetail button {
+        margin: 1em 1em 1em 0em;
+        padding: 1em;
+    }
+    
+    .itemDetail p {
+        width: 400px;
+    }
+    
+    .toCart {
+        width: 184px;
+    }
+}
+/* Large Desktops */
+@media screen and (min-width: 1481px){
+    .itemDetail {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .itemDetail div:last-child h3{
+        padding-bottom: 8px;
+    }
+    
+    .itemDetail img {
+        max-width: 400px;
+    }
+    
+    .itemDetail div:last-child {
+        margin-top: 4em;
+        margin-left: 4em;
+    }
+    
+    .itemDetail button {
+        margin: 1em 1em 1em 0em;
+        padding: 1em;
+    }
+    
+    .itemDetail p {
+        width: 400px;
+    }
+    
+    .toCart {
+        width: 184px;
+    }
 }

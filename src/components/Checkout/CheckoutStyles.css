@@ -1,0 +1,207 @@
+@media screen and (max-width: 500px) {
+    .checkoutContainer {
+        width: 300px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .cartCheckout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cartCheckout div:first-child {
+        width: 280px;
+        margin-top: 1em;
+    }
+
+    .cartCheckout img {
+        max-width: 120px;
+    }
+
+    .billingForm {
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .billingForm input {
+        margin: 8px 4px 8px 4px;
+        padding: 12px;
+    }
+
+    .billingForm input:last-child {
+        background-color: #0077ED;
+        color: #EEEEEE;
+        border-radius: 0.5rem;
+        border: 0px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 501px ) and (max-width: 1023px) {
+    .checkoutContainer {
+        width: 500px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .cartCheckout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cartCheckout div:first-child {
+        width: 380px;
+        margin-top: 1em;
+    }
+
+    .cartCheckout img {
+        max-width: 120px;
+    }
+
+    .billingForm {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .billingForm input {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .billingForm input:last-child {
+        background-color: #0077ED;
+        color: #EEEEEE;
+        border-radius: 0.5rem;
+        border: 0px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 1024px ) and (max-width: 1480px) {
+    .checkoutContainer {
+        width: 1000px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .cartCheckout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cartCheckout div:first-child {
+        width: 440px;
+        margin-top: 1em;
+    }
+
+    .cartCheckout img {
+        max-width: 120px;
+    }
+
+    .billingForm {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .billingForm input {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .billingForm input:last-child {
+        background-color: #0077ED;
+        color: #EEEEEE;
+        border-radius: 0.5rem;
+        border: 0px;
+        cursor: pointer;
+    }
+}   
+
+@media screen and (min-width: 1481px){
+    .checkoutContainer {
+        width: 1200px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .cartCheckout {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cartCheckout div:first-child {
+        width: 440px;
+        margin-top: 1em;
+    }
+
+    .cartCheckout img {
+        max-width: 120px;
+    }
+
+    .billingForm {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+        margin: auto;
+        margin-top: 1em;
+    }
+
+    .billingForm input {
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .billingForm input:last-child {
+        background-color: #0077ED;
+        color: #EEEEEE;
+        border-radius: 0.5rem;
+        border: 0px;
+        cursor: pointer;
+    }
+}

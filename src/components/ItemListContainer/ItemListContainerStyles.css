@@ -2,6 +2,7 @@
 @media screen and (max-width: 500px){
     .itemsContainer {
         margin: auto;
+        margin-top: 1em;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -10,21 +11,15 @@
     }
     
     .minHeight {
-        min-height: (100vh - 3em - 300px);
+        min-height: 360px;
     }
     
     .categories {
         margin: auto;
         max-width: 1260px;
-        display: flex;
+        display: none;
         justify-content: left;
     }
-    
-    .categories select {
-        width: 16em;
-        padding: 0.5rem;
-        margin: 1rem;
-    } 
 }
 /* Tablets */
 @media screen and (min-width: 501px ) and (max-width: 1023px){
@@ -38,21 +33,15 @@
     }
     
     .minHeight {
-        min-height: (100vh - 3em - 300px);
+        min-height: 600px;
     }
     
     .categories {
         margin: auto;
         max-width: 1260px;
-        display: flex;
+        display: none;
         justify-content: left;
     }
-    
-    .categories select {
-        width: 16em;
-        padding: 0.5rem;
-        margin: 1rem;
-    }  
 }
 /* Medium Desktops */
 @media screen and (min-width: 1024px ) and (max-width: 1480px){
@@ -66,21 +55,38 @@
     }
     
     .minHeight {
-        min-height: (100vh - 3em - 300px);
+        min-height: 520px;
     }
     
     .categories {
         margin: auto;
+        margin-top: 1em;
         max-width: 1260px;
         display: flex;
         justify-content: left;
+        position: relative;
     }
     
-    .categories select {
-        width: 16em;
-        padding: 0.5rem;
-        margin: 1rem;
-    }  
+    .categories ul {
+        position: absolute;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+
+    .categories:hover ul {
+        margin-top: 2em;
+        background-color: white;
+        max-height: 300px;
+    }
+
+    .categories li {
+        padding: 1em;
+    }
+
+    .categoryColor {
+        color: black;
+    }
 }
 /* Large Desktops */
 @media screen and (min-width: 1481px){
@@ -95,7 +101,7 @@
     }
     
     .minHeight {
-        min-height: (100vh - 3em - 300px);
+        min-height: 520px;
     }
     
     .categories {
@@ -108,8 +114,24 @@
         position: relative;
     }
 
-    .categories select {
-        width: 240px;
-        padding: 8px;
+    .categories ul {
+        position: absolute;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+
+    .categories:hover ul {
+        margin-top: 2em;
+        background-color: white;
+        max-height: 300px;
+    }
+
+    .categories li {
+        padding: 1em;
+    }
+
+    .categoryColor {
+        color: black;
     }
 }

@@ -3,9 +3,8 @@
     .itemCard {
         display: flex;
         flex-direction: column;
-        max-width: 400px;
+        max-width: 300px;
         padding: 2em;
-        margin: 1em;
         border-top: 2px solid #333333;
     }
     
@@ -31,7 +30,7 @@
     .itemCard {
         display: flex;
         flex-direction: column;
-        max-width: 400px;
+        max-width: 320px;
         padding: 2em;
         margin: 1em;
         border-top: 2px solid #333333;
@@ -59,7 +58,7 @@
     .itemCard {
         display: flex;
         flex-direction: column;
-        max-width: 400px;
+        max-width: 350px;
         padding: 2em;
         margin: 1em;
         border-top: 2px solid #333333;

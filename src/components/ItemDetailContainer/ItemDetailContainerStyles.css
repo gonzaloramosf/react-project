@@ -1,13 +1,28 @@
 @media screen and (max-width: 500px){
-
+    .itemDetailContainer {
+        width: 320px;
+        margin: auto;
+        display: flex;
+        min-height: 595px;
+    }
 }
 /* Tablets */
 @media screen and (min-width: 501px ) and (max-width: 1023px){
-
+    .itemDetailContainer {
+        width: 700px;
+        margin: auto;
+        display: flex;
+        min-height: 595px;
+    }
 }
 /* Medium Desktops */
 @media screen and (min-width: 1024px ) and (max-width: 1480px){
-
+    .itemDetailContainer {
+        width: 800px;
+        margin: auto;
+        display: flex;
+        min-height: 535px;
+    }
 }
 /* Large Desktops */
 @media screen and (min-width: 1481px){

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getFirestore } from "../../firebase";
 import { useUser } from "../../Context/UserContext";
+import CheckWidget from '../CheckWidget/CheckWidget';
+import './PurchaseReceivedStyles.css'
 
 const PurchaseReceived= () => {
     const {user} = useUser();
@@ -19,13 +21,15 @@ const PurchaseReceived= () => {
     console.log(order);
 
     return (
-        <div>
+        <div className="purchaseReceivedContainer">
             {
                 isLoading || !order ? <p> loading... </p> :
-                <div> 
-                    <h1> Thanks {order.buyer.name}</h1>
-                    <h2> Order details: {order.items.cart[0].item.name}</h2>
+                <div className="purchaseReceived"> 
+                    <h2> Thanks {order.buyer.name}!</h2>
+                    <h3> Order details: {order.items.cart[0].item.name}</h3>
+                    <p> Order id: {order.id}</p>
                     <p> Email: {user.email}</p>
+                    <CheckWidget/>
                 </div>
             }
         </div>

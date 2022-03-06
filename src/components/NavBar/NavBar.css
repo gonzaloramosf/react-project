@@ -85,8 +85,23 @@
   }
 
   .navCart {
-    margin-right: 1em;
     margin-top: 0.5em;
+  }
+
+  .prof {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navCart {
+    margin-top: 0.5rem;
+  }
+
+  .navProfile {
+    margin-top: 0.6rem;
+    margin-left: 1em;
+    cursor: pointer;
   }
 }
 /* Tablet */
@@ -176,8 +191,23 @@
   }
 
   .navCart {
-    margin-right: 1em;
     margin-top: 0.5em;
+  }
+
+  .prof {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navCart {
+    margin-top: 0.5rem;
+  }
+
+  .navProfile {
+    margin-top: 0.6rem;
+    margin-left: 1em;
+    cursor: pointer;
   }
 }
 /* Medium Deskptops*/

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useUser } from "../../Context/UserContext";
 import AlertError from "../AlertError/AlertError";
 import './RegisterStyles.css';
@@ -39,6 +39,8 @@ const Register = () => {
                     <input type='password' name='password' id="password" placeholder="Password" onChange={handleChange} />
 
                     <button> Register </button>
+                    <span> Already register ? </span>
+                    <button> <Link to='/login'> Login </Link> </button>
                 </form>
             </div>
         </div>

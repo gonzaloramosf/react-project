@@ -16,14 +16,16 @@ const Profile = () => {
     };
 
     return (
-        <section>
+        <section className='profile'>
             <div>
                 <h2> Your Account </h2>
             </div>
 
             <div>
-                <p> welcome {user.displayName || user.email}</p>
-                <button onClick={handleClick}> log out </button>
+                <img src={user.photoURL} alt='User profile'/>
+                <p> Welcome {user.displayName || user.email} !</p>
+                <p> Email: {user.email} </p>
+                <button onClick={handleClick}> Log out </button>
             </div>
         </section>
     );

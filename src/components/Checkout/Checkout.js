@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {useCart} from '../../Context/CartContext';
 import { useUser } from '../../Context/UserContext';
 import { getFirestore } from "../../firebase";
+import './CheckoutStyles.css'
 
 const Checkout = () => {
     const {user} = useUser();
@@ -17,7 +18,7 @@ const Checkout = () => {
         total += element.item.price * element.quantity;
         });
         return total;
-    }
+    };
 
     const handleSumbit = (evt) => {
         evt.preventDefault();
@@ -46,32 +47,38 @@ const Checkout = () => {
                                    navigate(`/purchasereceived/${res.id}`)
                             })
                                .catch((err) => console.log('error', err));
-    }
+    };
 
     return (
-        <div>
-            <h2> Summary </h2>
-            <p> You: {user.displayName || user.email} </p>
-            {cart.map((cart) => {
-                return (
-                    <div key={cart.item.id}>
-                        <p>Item id: {cart.item.id}</p>
-                        <p>${cart.item.price * cart.quantity}</p>
-                    </div>
-                )
-            })}
-            <h3> Billing dates </h3>
-            <form onSubmit={handleSumbit}>
-                <label htmlFor='name'> Nombre </label>
-                <input type='text' id='name' name='name' placeholder='Nombre' 
-                       value={name} onChange={e=>setName(e.target.value)}/>
-                <label htmlFor='phone'> Celular </label>
-                <input type='number' id='phone' name='phone' placeholder='Numero celular' 
-                       value={phone} onChange={e=>setPhone(e.target.value)}/>
-                <input type='submit' value='Buy' />
-            </form>
+        <div className='checkoutContainer'>
+            <div className='checkout'>
+                <h2> Summary </h2>
+                <p> Hi, {user.displayName || user.email} </p>
+                <p> Buying email: {user.email} </p>
+                {cart.map((cart) => {
+                    return (
+                        <div className='cartCheckout' key={cart.item.id}>
+                            <div> 
+                                <h3> Product: {cart.item.name}</h3>
+                                <p>Id: {cart.item.id}</p>
+                                <p>Price: ${cart.item.price * cart.quantity}</p>
+                            </div>
+                            <div className='holas'> 
+                                <img src={require(`../images/${cart.item.pictureUrl}`)} alt='Product'/>
+                            </div>
+                        </div>
+                    )
+                })}
+                <h2> Billing dates </h2>
+                <form className='billingForm' onSubmit={handleSumbit}>
+                    <input type='text' id='name' name='name' placeholder='Name' 
+                        value={name} onChange={e=>setName(e.target.value)}/>
+                    <input type='number' id='phone' name='phone' placeholder='Phone number' 
+                        value={phone} onChange={e=>setPhone(e.target.value)}/>
+                    <input type='submit' value='Buy Now' />
+                </form>
+            </div>
         </div>
-    )
-}
-
+    );
+};
 export default Checkout;
