@@ -26,7 +26,6 @@ const PurchaseReceived= () => {
                 isLoading || !order ? <p> loading... </p> :
                 <div className="purchaseReceived"> 
                     <h2> Thanks {order.buyer.name}!</h2>
-                    <h3> Order details: {order.items.cart[0].item.name}</h3>
                     <p> Order id: {order.id}</p>
                     <p> Email: {user.email}</p>
                     <CheckWidget/>

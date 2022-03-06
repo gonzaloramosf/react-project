@@ -156,6 +156,7 @@
 
 @media screen and (min-width: 1481px){
     .checkoutContainer {
+        min-height: calc(100vh - 444px);
         width: 1200px;
         display: flex;
         margin: auto;

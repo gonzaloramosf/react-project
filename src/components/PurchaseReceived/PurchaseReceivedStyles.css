@@ -12,11 +12,6 @@
         margin-top: 1em;
         text-align: center;
     }
-
-    .purchaseReceived h3 {
-        margin-top: 16px;
-        margin-bottom: 8px;
-    }
 }
 
 @media screen and (min-width: 501px ) and (max-width: 1023px) {
@@ -32,11 +27,6 @@
         margin: auto;
         margin-top: 1em;
         text-align: center;
-    }
-
-    .purchaseReceived h3 {
-        margin-top: 16px;
-        margin-bottom: 8px;
     }
 }
 
@@ -54,11 +44,6 @@
         margin-top: 1em;
         text-align: center;
     }
-
-    .purchaseReceived h3 {
-        margin-top: 16px;
-        margin-bottom: 8px;
-    }
 }   
 
 @media screen and (min-width: 1481px){
@@ -74,10 +59,5 @@
         margin: auto;
         margin-top: 1em;
         text-align: center;
-    }
-
-    .purchaseReceived h3 {
-        margin-top: 16px;
-        margin-bottom: 8px;
     }
 }
