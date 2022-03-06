@@ -7,7 +7,7 @@ import './CheckoutStyles.css'
 
 const Checkout = () => {
     const {user} = useUser();
-    const {cart} = useCart();
+    const {cart, totalPrice} = useCart();
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const navigate = useNavigate();
@@ -63,12 +63,13 @@ const Checkout = () => {
                                 <p>Id: {cart.item.id}</p>
                                 <p>Price: ${cart.item.price * cart.quantity}</p>
                             </div>
-                            <div className='holas'> 
+                            <div> 
                                 <img src={require(`../images/${cart.item.pictureUrl}`)} alt='Product'/>
                             </div>
                         </div>
                     )
                 })}
+                <h3 className='priceCheckout'> Total: ${totalPrice} </h3>
                 <h2> Billing dates </h2>
                 <form className='billingForm' onSubmit={handleSumbit}>
                     <input type='text' id='name' name='name' placeholder='Name' 

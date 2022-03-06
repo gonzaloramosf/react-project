@@ -48,11 +48,19 @@
         border: 0px;
         cursor: pointer;
     }
+
+    .priceCheckout {
+        display: flex;
+        justify-content: right;
+        margin-top: 16px;
+        margin-right: 4px;
+        margin-bottom: 16px;
+    }
 }
 
 @media screen and (min-width: 501px ) and (max-width: 1023px) {
     .checkoutContainer {
-        width: 500px;
+        width: 480px;
         display: flex;
         margin: auto;
         justify-content: center;
@@ -72,7 +80,7 @@
     }
 
     .cartCheckout div:first-child {
-        width: 380px;
+        width: 340px;
         margin-top: 1em;
     }
 
@@ -99,6 +107,13 @@
         border-radius: 0.5rem;
         border: 0px;
         cursor: pointer;
+    }
+
+    .priceCheckout {
+        display: flex;
+        justify-content: right;
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 }
 
@@ -152,6 +167,14 @@
         border: 0px;
         cursor: pointer;
     }
+
+    .priceCheckout {
+        display: flex;
+        justify-content: right;
+        margin-top: 16px;
+        margin-right: 4px;
+        margin-bottom: 16px;
+    }
 }   
 
 @media screen and (min-width: 1481px){
@@ -204,5 +227,13 @@
         border-radius: 0.5rem;
         border: 0px;
         cursor: pointer;
+    }
+
+    .priceCheckout {
+        display: flex;
+        justify-content: right;
+        margin-top: 16px;
+        margin-right: 4px;
+        margin-bottom: 16px;
     }
 }
