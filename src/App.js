@@ -59,7 +59,6 @@ function App() {
         </BrowserRouter>
       </CartProvider>
     </UserProvider>
-    // Falta el <Footer/>
   );
 }
 export default App;

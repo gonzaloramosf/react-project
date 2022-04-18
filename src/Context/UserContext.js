@@ -19,13 +19,11 @@ export const UserProvider = ({children}) => {
     }
     const passwordForgot = (email) => getAuth().sendPasswordResetEmail(email);
 
-
     useEffect(() => {
         const unsuscribe = getAuth().onAuthStateChanged( currentUser => {
             setUser(currentUser);
             setIsLoading(false);
         })
-
         return () => unsuscribe();
     },[])
     // user se puede utilizar para mostrar los datos del usuario logeado
@@ -34,6 +32,6 @@ export const UserProvider = ({children}) => {
         <UserContext.Provider value={{signUp, logIn, user, logOut, isLoading, loginWithGoogle, passwordForgot}}>
             { children }
         </UserContext.Provider>
-    )
+    );
 }
 export const useUser = () => useContext(UserContext);
