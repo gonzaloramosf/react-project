@@ -2,13 +2,22 @@ import { createContext, useContext, useEffect, useState } from "react";
 export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
+    const [isInitiallyFetched, setIsInitiallyFetched] = useState(false);
     const [cart, setCart] = useState([]);
     const [totalPrice, setTotalPrice] = useState();
     const [totalItems, setTotalItems] = useState(0);
 
-    // useEffect( () => {
-    //     localStorage.getItem('cart') == null ? localStorage.setItem("cart", JSON.stringify(cart)) : setCart(JSON.parse(localStorage.getItem('cart')));
-    // }, [cart] );
+    useEffect(()=>{
+        let prev_items = JSON.parse(localStorage.getItem('cart')) || [];
+        setCart(prev_items);
+        setIsInitiallyFetched(true);
+    },[])
+      
+    useEffect(() => {
+        if(isInitiallyFetched){
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
+    },[cart]);
 
     useEffect(() =>{
         let totItems = 0;
